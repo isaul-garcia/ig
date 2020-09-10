@@ -1,0 +1,124 @@
+
+@import url(https://fonts.googleapis.com/css?family=Heebo|Prompt&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap');
+
+html {
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.166667px;
+  line-height: 1.7em;
+  background-color: #f7f7f7;
+  cursor: default;
+  display: block;
+  margin: 0px;
+}
+
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+}
+
+a, h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, .h7, h8, .h8 {
+  color: #181818;
+
+}
+
+h1, .h1 {
+  font-family: "Red Rose", sans-serif;
+  font-size: 60px;
+  line-height: 0px;
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-family: "Red Rose", sans-serif;
+  font-size: 40px;
+  line-height: 0px;
+  font-weight: 700;
+}
+
+h3, .h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  line-height: 0px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+h4, .h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  line-height: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 0em;
+  font-stretch: 90%;
+  transform: scaleX(0.8);
+}
+
+h5, .h5 {
+  font-family: "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 0em;
+  font-stretch: 90%;
+  transform: scaleX(0.8);
+}
+
+h6, .h6 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------------------------------------------- */
+
+.boxx {
+  float: left;
+  width: 100%;
+  padding-bottom: 0px;
+}
+
+.boxie {
+  float: left;
+  width: 100%;
+  height: 225px;
+  margin-top: 0px;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.imag {
+  width: 100%;
+}
+
+.fortypeL {
+  padding: 25px;
+  width: 50%;
+}
+
+.fortypeR {
+  padding: 25px;
+  width: 50%;
+  float: right;
+}
