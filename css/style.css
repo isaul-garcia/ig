@@ -45,7 +45,7 @@ h2, .h2 {
   font-family: "Red Rose", sans-serif;
   font-size: 40px;
   line-height: 0px;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 h3, .h3 {
@@ -57,31 +57,39 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 25px;
+  font-family: "Arial", sans-serif;
+  font-size: 23px;
   line-height: 20px;
   font-weight: 300;
   text-decoration: none;
   margin: 0em;
   font-stretch: 90%;
   transform: scaleX(0.8);
+  transform-origin: bottom left;
 }
 
 h5, .h5 {
   font-family: "Arial", sans-serif;
-  font-size: 25px;
+  font-size: 23px;
   line-height: 20px;
   font-weight: 300;
   text-decoration: none;
   margin: 0em;
   font-stretch: 90%;
   transform: scaleX(0.8);
+  transform-origin: bottom left;
 }
 
 h6, .h6 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Arial", sans-serif;
     font-size: 8px;
     line-height: 8px;
+    font-weight: 300;
+    text-decoration: none;
+    margin: 0em;
+    font-stretch: 90%;
+    transform: scaleX(0.8);
+    transform-origin: bottom left;
 }
 
 a {
@@ -90,7 +98,6 @@ a {
 
 /* --------------------------------------------- */
 
-.pointer {cursor: pointer;}
 
 .L {
   width: 30%;
@@ -104,7 +111,7 @@ a {
 }
 
 .spacetop {
-  padding-top: 45px;
+  padding-top: 44px;
 }
 
 .boxx {
@@ -143,7 +150,7 @@ a {
 
 .bord {
   border: 1px solid;
-  border-radius: 12px;
+  border-radius: 16px;
   border-color: #000;
 }
 
@@ -154,19 +161,20 @@ a {
     display: none;
 }
 
+.port {
+overflow:auto !important;
+-webkit-overflow-scrolling: touch !important;
+}
+
 /* ---------- navbar ----------*/
 .squished {
   padding-top: 3em;
-}
-.wrap {
-  ...
-  position: relative;
-  /*some prefix*/-transform-origin: 0 0;
 }
 
 .head {
   position: fixed;
   top: 0;
+  -webkit-transform: translate3d(0,0,0);
 }
 .zd1 {
   z-index: -1;
@@ -188,7 +196,7 @@ a {
 
 /* ---------- images ----------*/
 .imag {
-  width: 100%;
+  height: 100%;
 }
 
 .icon {
@@ -214,6 +222,8 @@ a {
    width: 100%;
 }
 
-
-
+.glow{
+box-shadow: 0px 0px 15px 4px rgba(187, 117, 255,1);
+background-color: rgba(187, 117, 255,1);
+}
 --------------------------------------------------------------------------------------

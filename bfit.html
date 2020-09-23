@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <title>Isaul Garcia</title>
+  <link href="css/style_single.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+<div class="header">
+  <div class="progress-container">
+    <div class="progress-bar tex_inp01 tex_inp02" id="myBar" type="glowv" value="glowv"></div>
+  </div>
+</div>
+
+<section>
+  <div style="margin-bottom: 18px;">
+    <a class="boxie">
+      <img class="imag" src="images/bfit1.jpg">
+    </a>
+  </div>
+</section>
+
+<section>
+  <div>
+    <h2 style="text-align: left; transform-origin: bottom left;">B-Fit</h2>
+    <h2 style="text-align: right; transform-origin: bottom right;">UI, Branding</h2>
+    <h2 style="text-align: center; transform-origin: bottom center;">2018</h2>
+    <br>
+  </div>
+
+  <div>
+    <div class="boxx fortypeL">
+      <h6>
+        B-Fit was a comissioned project to conceptualize the idea of a virtual coach app. It brought together all the tools needed to coach yourself but with an interface that responded to your needs and progressed with you as you go.
+      </h6>
+    </div>
+  </div>
+
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/bfit3.jpg">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie">
+      <img class="imag" href="hi.html" src="images/bfit2.jpg">
+    </a>
+  </div>
+</section>
+
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+// Glow of the growing bar
+var glowv = document.getElementsByClassName('tex_inp01 tex_inp02');
+glowv[0].className = glowv[0].className + " glowv";
+
+</script>
+
+</body>
+
+
+</html>

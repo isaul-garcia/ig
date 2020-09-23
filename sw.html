@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <title>Isaul Garcia</title>
+  <link href="css/style_single.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+<div class="header">
+  <div class="progress-container">
+    <div class="progress-bar tex_inp01 tex_inp02" id="myBar" type="glowv" value="glowv"></div>
+  </div>
+</div>
+
+<section>
+  <div style="margin-bottom: 18px;">
+    <a class="boxie">
+      <img class="imag" src="images/sw1.jpg">
+    </a>
+  </div>
+</section>
+
+<section>
+  <div>
+    <h2 style="text-align: left; transform-origin: bottom left;">Someware</h2>
+    <h2 style="text-align: right; transform-origin: bottom right;">Interaction, Game Developing</h2>
+    <h2 style="text-align: center; transform-origin: bottom center;">2020</h2>
+    <br>
+  </div>
+
+  <div>
+    <div class="boxx fortypeL">
+      <h6>
+        Someware is an exploration about using place making as a tool to understand and augment our immediate context. The project emphasizes the process as the main outcome.<br><br>Its objective is to awcknowledge a place as a commputing entity. Primarily to make the distinction between the internet as a world wide computer and the phone as a compact personal computer, this mutual computer stands somewhere in between.
+      </h6>
+    </div>
+
+    <div class="boxx fortypeR">
+      <h6>
+        Place computing is something that grows from the ground and not just the cloud. Its a hybrid between the precence of what’s there physically and virtually.
+      </h6>
+    </div>
+  </div>
+
+<iframe width="100%" height="600px" src="https://www.youtube.com/embed/XZFu--9sa8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/sw4.png">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/sw5.png">
+    </a>
+  </div>
+  <hr class="pushdown" width="100%" size="1" color="#000">
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/sw7.png">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/sw3.jpg">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/sw8.jpg">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie">
+      <img class="imag" href="hi.html" src="images/sw9.jpg">
+    </a>
+  </div>
+</div>
+</section>
+
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+// Glow of the growing bar
+var glowv = document.getElementsByClassName('tex_inp01 tex_inp02');
+glowv[0].className = glowv[0].className + " glowv";
+
+</script>
+
+</body>
+
+
+</html>
