@@ -20,7 +20,7 @@ body {
   cursor: default;
   display: block;
   margin: 0px;
-}
+  }
 
 
 p {
@@ -98,7 +98,38 @@ a {
   text-decoration: none;
 }
 
-/* --------------------------------------------- */
+/* ---------------------- OLDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD----------------------- */
+
+.boxx {
+  float: left;
+  width: 100%;
+  padding-bottom: 0px;
+}
+
+.boxie {
+  width: 100%;
+  display:block;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.Ximag {
+  width: 100%;
+}
+
+.XfortypeL {
+  padding: 25px;
+  width: 50%;
+}
+
+.XfortypeR {
+  padding: 25px;
+  width: 50%;
+  float: right;
+}
+
+/*------------------- hmmm ------------*/
 
 .header {
   position: fixed;
@@ -120,20 +151,10 @@ a {
 }
 
 
-.boxx {
-  float: left;
-  width: 100%;
-  padding-bottom: 0px;
-}
 
-.boxie {
-  width: 100%;
-  display:block;
-}
 
-::-webkit-scrollbar {
-    display: none;
-}
+
+
 
 .intextimg {
   margin-top: 50px;
@@ -178,7 +199,15 @@ box-shadow: 0px 0px 15px 4px rgba(187, 117, 255,1);
 }
 
 .glowo{
-box-shadow: 0px 0px 15px 4px rgba(252, 86, 3,1);
+box-shadow: 0px 0px 15px 4px rgba(229, 79, 49,1);
+}
+
+.glowa{
+box-shadow: 0px 0px 15px 4px rgba(25, 107, 243,1);
+}
+
+.glowy{
+box-shadow: 0px 0px 15px 4px rgba(255, 234, 0,1);
 }
 
 .title {
@@ -203,5 +232,9 @@ box-shadow: 0px 0px 15px 4px rgba(252, 86, 3,1);
   margin-bottom: 55px;
 }
 
----
----
+.hovy:link {
+}
+
+.hovy:hover {
+  font-style: italic;
+}
