@@ -9,11 +9,11 @@ body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.166667px;
   line-height: 1.7vw;
-  background-color: #000;
   cursor: default;
   margin: 0px;
   overflow-x: hidden;
   overflow-y:hidden;
+  background-color: #000;
 }
 
 * {
@@ -39,15 +39,15 @@ h1, .h1 {
 
 h2, .h2 {
   font-family: "Arial", san-serif;
-  font-size: 157px;
-  line-height: 157px;
+  font-size: 100px;
+  line-height: 100px;
   font-weight: 900;
 }
 
 h3, .h3 {
   font-family: "Arial", san-serif;
-  font-size: 80px;
-  line-height: 80px;
+  font-size: 55px;
+  line-height: 55px;
   font-weight: 900;
 }
 
@@ -85,12 +85,15 @@ a {
 }
 
 canvas {
-  display: block;
-  overflow: hidden;
-  margin-bottom: -10px;
+  display: none;
 }
 
 /* --------------------------------------------- */
+
+#myCanvas {
+  display: none;
+}
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -112,9 +115,9 @@ canvas {
 }
 
 .mid {
-  margin-top: 5vh;
+  margin-top: 10vh;
   margin-left: 2vw;
-  width: 100vw;
+  width: 75vw;
   padding: 3vw;
   position: fixed;
   display: flex;
