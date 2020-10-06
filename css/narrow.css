@@ -1,6 +1,7 @@
 
 html {
   overflow-x: hidden;
+  overflow-y:hidden;
 }
 
 
@@ -11,6 +12,8 @@ body {
   background-color: #000;
   cursor: default;
   margin: 0px;
+  overflow-x: hidden;
+  overflow-y:hidden;
 }
 
 * {
@@ -36,22 +39,22 @@ h1, .h1 {
 
 h2, .h2 {
   font-family: "Arial", san-serif;
-  font-size: 75px;
-  line-height: 60px;
+  font-size: 157px;
+  line-height: 157px;
   font-weight: 900;
 }
 
 h3, .h3 {
   font-family: "Arial", san-serif;
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 80px;
+  line-height: 80px;
   font-weight: 900;
 }
 
 h4, .h4 {
   font-family: "Arial", sans-serif;
-  font-size: 28px;
-  line-height: 20px;
+  font-size: 55px;
+  line-height: 55px;
   font-weight: 900;
   text-decoration: none;
   margin: 0vw;
@@ -59,8 +62,8 @@ h4, .h4 {
 
 h5, .h5 {
   font-family: "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 32px;
+  line-height: 45px;
   font-weight: 700;
   text-decoration: none;
   margin: 0vw;
@@ -69,8 +72,8 @@ h5, .h5 {
 
 h6, .h6 {
     font-family: "Helvetica", san-serif;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 28px;
+    line-height: 32px;
     font-weight: 300;
     text-decoration: none;
     margin: 0;
@@ -109,26 +112,31 @@ canvas {
 }
 
 .mid {
-  margin-top: 15vh;
+  margin-top: 5vh;
   margin-left: 2vw;
-  width: 55vw;
+  width: 100vw;
   padding: 3vw;
   position: fixed;
   display: flex;
   z-index: 2;
 }
 
-.stretch {
-  transition-timing-function: ease-out;
-  transition: 0.3s;
+.toback {
+    background-color: rgba(0,0,0, 0.75);
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    text-align: center;
+    border-radius: 70px;
 }
 
-.stretch:hover {
-  transition-timing-function: ease-in;
-  transform: scaleX(2.5);
-  transition: 0.3s;
+
+.grey {
 }
 
+.grey:hover {
+  color: lightgrey;
+}
 
 .navtext {
   width: 45vw;
@@ -207,21 +215,21 @@ html, body, .page {
 
 #p1 {
   left: 0;
+  background: rgba(0,0,0, 0.75);
 }
 
 #p2, #p3, #p4, #p5 {
   opacity: 0;
 }
 
-#p1 {pointer-events: none; -webkit-filter: blur(0px);}
-#p2 { background: rgba(0,0,0, 0.75);  opacity: 0; pointer-events: none; -webkit-filter: blur(30px);}
-#p3 { opacity: 0; pointer-events: none; -webkit-filter: blur(30px);}
-#p4 { background: rgba(0,0,0, 0.5);  opacity: 0; pointer-events: none; -webkit-filter: blur(30px);}
+#p1 {pointer-events: none;}
+#p2 { background: rgba(0,0,0, 0.75);  opacity: 0; pointer-events: none;}
+#p3 { opacity: 0; pointer-events: none;}
+#p4 { background: rgba(0,0,0, 0.5);  opacity: 0; pointer-events: none;}
 
 #t2:target #p2,
 #t3:target #p3
 {
-  -webkit-filter: blur(0px);
   opacity: 1;
   transition-delay: 0s !important;
 }
@@ -233,7 +241,6 @@ html, body, .page {
 #t2:target #p1 .icon,
 #t3:target #p1 .icon {
   opacity: 0;
-  -webkit-filter: blur(30px);
 }
 
 #t2:target #p1 .navlink,
@@ -261,7 +268,6 @@ html, body, .page {
 #t3:target #p4 {
   background: rgba(0,0,0, 0.75);
   opacity: 1;
-  -webkit-filter: blur(0px);
   pointer-events: auto;
   overflow: scroll;
 }
@@ -331,18 +337,19 @@ html, body, .page {
 .btn {
   background-color: rgba(0,0,0, 0.75);
   text-align: center;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   cursor: pointer;
   border: 1px solid #8f8f8f;
-  border-radius: 25px;
+  border-radius: 50px;
   color: #8f8f8f;
   transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   outline: none;
+  font-size: 40px;
 }
 
 .btn:hover {
@@ -355,6 +362,7 @@ html, body, .page {
 
 .extend {
   padding-left: 0.75vw;
+  margin-top: -8px;
 }
 
 
@@ -365,9 +373,4 @@ html, body, .page {
 
 .show {
   display: block;
-}
-
-
-.long {
-  width: 48vw
 }
