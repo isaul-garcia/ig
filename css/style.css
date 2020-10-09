@@ -118,6 +118,18 @@ canvas {
   z-index: 2;
 }
 
+.wid {
+  margin-top: 15vh;
+  margin-left: 2vw;
+  width: 55vw;
+  padding: 3vw;
+  position: fixed;
+  display: flex;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
 .stretch {
   transition-timing-function: ease-out;
   transition: 0.3s;
@@ -370,4 +382,11 @@ html, body, .page {
 
 .long {
   width: 48vw
+}
+
+.portal {
+  padding-top: 8vh;
+  padding-right: 2vh;
+  bottom: 0;
+
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <title>Isaul Garcia</title>
+  <link href="css/style_single.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+<div class="header">
+  <div class="progress-container">
+    <div class="progress-bar tex_inp01 tex_inp02" id="myBar" type="glowy" value="glowy"></div>
+  </div>
+</div>
+
+<section>
+  <div style="margin-bottom: 90px;">
+    <a class="boxie">
+      <img class="imag" src="images/ba7.png">
+    </a>
+  </div>
+</section>
+
+<section>
+  <div>
+    <h2 style="text-align: left; transform-origin: bottom left;">Bonjour! Ana</h2>
+    <h2 style="text-align: right; transform-origin: bottom right;">Branding, UI</h2>
+    <h2 style="text-align: center; transform-origin: bottom center;">2018</h2>
+    <br>
+  </div>
+
+  <div>
+    <div class="boxx fortypeL">
+      <h6>
+        Bonjour! Ana is a subscription based cleaning service.<br><br>The company wanted to reestablish their whole branding strategy.
+      </h6>
+    </div>
+
+    <div class="boxx fortypeR" style="margin-bottom: 80px;">
+      <h6>
+        Gabriela Enid and I where hired as designers to do just that. We where only given the logo and its initial color. Then we worked together to conceptualize the identity and tone of the whole company.
+      </h6>
+    </div>
+  </div>
+
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/ba1.png">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/ba2.png">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/ba5.png">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/ba3.png">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie pushdown">
+      <img class="imag" href="hi.html" src="images/ba6.png">
+    </a>
+  </div>
+  <div class="boxx">
+    <a class="boxie">
+      <img class="imag" href="hi.html" src="images/ba4.png">
+    </a>
+  </div>
+</div>
+</section>
+
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+// Glow of the growing bar
+var glowy = document.getElementsByClassName('tex_inp01 tex_inp02');
+glowy[0].className = glowy[0].className + " glowy";
+
+</script>
+
+</body>
+
+
+</html>

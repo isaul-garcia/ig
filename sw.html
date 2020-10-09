@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <title>Isaul Garcia</title>
+  <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+
+
+<body>
+<section>
+  <div>
+
+
+    <div>
+      <section>
+
+        <div class="header">
+          <div class="navtext L extend">
+            <div id="myBtnContainer" class="bots">
+              <button class="bots btn" onclick="filterSelection('one')">• Design</button>
+              <button class="bots btn" onclick="filterSelection('two')">• Development</button>
+            </div>
+          </div>
+
+          <div class="navtext">
+            <h4 class="stretch R"><a class="navlink grey toback"href="index.html#t3">Back</a></h4>
+          </div>
+        </div>
+
+        <div id="wid" class="wid">
+          <div class="L" style="margin-top:-5vh;">
+            <h2><a class="isaul">Someware</a></h2>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="R portal">
+      <object id="portal" type="text/html" class="portal" style="width:85vw; height:87vh; margin-bottom:-8px" data="00sw.html">
+    </div>
+
+      <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+          var curtain = document.createElement("div")
+          curtain.style.cssText = "position: fixed; top: 0; left: 0; z-index: 3; width: 100%; height: 100%; background: rgba(0,0,0,0.8) none 50% 50%/contain no-repeat; display: none"
+          document.body.appendChild(curtain)
+          curtain.onclick = function() { curtain.style.display = "none" }
+          var boxes = document.getElementsByClassName("hellbox")
+          for(var i=0; i<boxes.length; ++i) boxes[i].addEventListener("click", function(e) {
+            e.preventDefault()
+            curtain.style.backgroundImage = "url('"+e.target.parentNode.href+"')"
+            curtain.style.display = "block"
+          })
+        })
+
+          function adjustStyle(width) {
+            width = parseInt(width);
+            if (width < 1300) {
+              $("#size-stylesheet").attr("href", "css/narrow.css");
+            } else {
+               $("#size-stylesheet").attr("href", "css/style.css");
+            }
+          }
+
+          $(function() {
+            adjustStyle($(this).width());
+            $(window).resize(function() {
+              adjustStyle($(this).width());
+            });
+          });
+
+      </script>
+  </div>
+</section>
+
+
+</body>
+
+
+</html>

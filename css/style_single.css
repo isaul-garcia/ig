@@ -1,0 +1,226 @@
+
+@import url(https://fonts.googleapis.com/css?family=Heebo|Prompt&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap');
+
+html {
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.166667px;
+  line-height: 0.95em;
+  background-color: #000;
+  cursor: default;
+  display: block;
+  margin: 0px;
+
+  }
+
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+}
+
+a, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, .h7, h8, .h8 {
+  color: #f0f0f0;
+
+}
+
+h1, .h1 {
+  font-family: "Red Rose", sans-serif;
+  font-size: 28px;
+  line-height: 0px;
+  font-weight: 400;
+}
+
+h2, .h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 0px;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 0em;
+  font-stretch: 90%;
+  transform: scaleX(0.85);
+}
+
+h3, .h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  line-height: 0px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+h4, .h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  line-height: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 0em;
+  font-stretch: 90%;
+  transform: scaleX(0.8);
+  transform-origin: bottom left;
+}
+
+h5, .h5 {
+  font-family: "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 0em;
+  font-stretch: 90%;
+  transform: scaleX(0.85);
+  transform-origin: bottom left;
+}
+
+h6, .h6 {
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    margin: 0em;
+    transform: scaleX(0.9);
+    transform-origin: bottom left;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.boxx {
+  float: left;
+  width: 100%;
+  padding-bottom: 0px;
+}
+
+.boxie {
+  width: 100%;
+  display:block;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.Ximag {
+  width: 100%;
+}
+
+.XfortypeL {
+  padding: 25px;
+  width: 50%;
+}
+
+.XfortypeR {
+  padding: 25px;
+  width: 50%;
+  float: right;
+}
+
+/*------------------- hmmm ------------*/
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #000;
+  border-bottom: 4px solid #000;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+}
+
+.progress-bar {
+  height: 8px;
+  margin-top: 0px;
+  background: #f0f0f0;
+  width: 0%;
+}
+
+
+
+
+
+
+
+.intextimg {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.imag {
+  width: 100%;
+  height: 100%;
+  display:block;
+}
+.simag {
+  width: 80%;
+  height: 100%;
+  display:block;
+}
+.xsimag {
+  width: 50%;
+  height: 100%;
+  display:block;
+}
+
+.fortypeL {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  width: 50%;
+}
+
+.fortypeR {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  width: 50%;
+  float: right;
+}
+
+.title {
+  margin-top: -12px;
+  text-align: right;
+  float: right;
+  width: 100%;
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+
+.pushup {
+  margin-top: 55px;
+}
+
+.pushdown {
+  margin-bottom: 55px;
+}
+
+.hovy:link {
+}
+
+.hovy:hover {
+  font-style: italic;
+}
