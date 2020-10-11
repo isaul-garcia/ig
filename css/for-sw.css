@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
+
+html {
+  overflow-x: hidden;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.166667px;
+  line-height: 1.7vw;
+  background-color: #000;
+  cursor: default;
+  margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+  font-family: "Cutive Mono", san-serif;
+}
+
+a, h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, .h7, h8, .h8 {
+  color: #fff;
+  font-family: "Cutive Mono", san-serif;
+}
+
+h1, .h1 {
+  font-size: 60px;
+  line-height: 0px;
+  font-weight: 300;
+}
+
+h2, .h2 {
+  font-size: 75px;
+  line-height: 75px;
+  font-weight: 300;
+}
+
+h3, .h3 {
+  font-size: 75px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+h4, .h4 {
+  font-size: 75px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+h5, .h5 {
+  font-size: 75px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+h6, .h6 {
+  font-size: 75px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+a {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+canvas {
+  display: block;
+  overflow: hidden;
+  margin-bottom: -10px;
+}
+
+/* --------------------------------------------- */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+  margin-top: 1vw;
+  padding: 3vw;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-itvws: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.midpos {
+}
+
+.mid {
+  margin-top: 12vh;
+  margin-left: 1vw;
+  width: 40vw;
+  padding: 2vw;
+  position: absolute;
+  z-index: 2;
+  overflow: scroll;
+}
+
+
+.border {
+  margin: 1vw;
+  float: left;
+  width: 100%;
+  padding: 1vw;
+  border: 1px #fff solid;
+}
+
+.stay {
+  position: static;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.navtext {
+  width: 45vw;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.navlink {
+  pointer-events: auto;
+}
+
+.navlink-first {
+  pointer-events: none;
+}
+
+.pointer {cursor: pointer;}
+
+.L {
+  transform-origin: bottom left;
+  float: left;
+  text-align: left;
+}
+
+.R {
+  transform-origin: bottom right;
+  float: right;
+  text-align: right;
+}
+
+.C {
+  padding-right: 50vw;
+}
+
+
+.footer {
+  padding: 3vw;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-itvws: center;
+  justify-content: center;
+  bottom: 8px;
+}
+
+.isaul {
+  color: #f0f0f0;
+  text-shadow: 0px 0px 65px rgba(0,0,0, 0.6)
+}
+
+.otro {
+  text-shadow: 0px 0px 50px rgba(0,0,0, 0.3)
+}
+
+.wall {
+  z-index: -1;
+}
+
+
+/* --------------------------------------------- */
+
+html, body, .page {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  position: absolute;
+  overflow: hidden;
+}
+
+
+
+.gallery_container {
+  width: 100vw;
+  padding: 5vw;
+  margin: 0;
+  margin-top: 1vw;
+  margin-left: 2.5vw;
+  z-index: 1;
+}
+
+.img_container {
+  float: left;
+  overflow: hidden;
+  text-align: left;
+  margin: 0px;
+  margin-top: 1vw;
+  margin-bottom: 3vw;
+  width: 45vw;
+}
+
+.img_object {
+  width: 40vw;
+  height: 32vw;
+  object-fit: cover;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  opacity: 1;
+  border-radius: 3px;
+  -webkit-filter: brightness(80%);
+}
+
+.img_object:hover {
+  -webkit-filter: brightness(100%);
+}
+
+
+.btn {
+  background-color: rgba(0,0,0, 0.75);
+  text-align: center;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  border: 1px solid #8f8f8f;
+  border-radius: 25px;
+  color: #8f8f8f;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: rgba(60,60,60, 0.75);
+}
+
+.btn.active {
+  background-color: rgba(60,60,60, 0.75);
+}
+
+.extend {
+  padding-left: 0.75vw;
+}
+
+
+.filterDiv {
+  display: none;
+}
+
+
+.show {
+  display: block;
+}
+
+
+.long {
+  width: 48vw
+}
+
+.portal {
+  padding-top: 8vh;
+  padding-right: 2vh;
+  bottom: 0;
+
+}

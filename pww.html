@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <title>Isaul Garcia</title>
+  <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/4sw.css" />
+
+</head>
+
+
+
+<body>
+<section>
+  <div class="box_container">
+
+      <div id="t1">
+        <div id="t2">
+          <div id="sw">
+            <div id="t4">
+
+
+            <div class="page" id="p1">
+                  <section class="icon">
+
+            <div>
+              <div>
+                <canvas id="myCanvas"></canvas>
+
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+                    <script type="module">
+
+                          import * as THREE from 'https://threejs.org/build/three.module.js';
+
+                          import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+                          import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
+                          import { RGBELoader } from 'https://threejs.org/examples/jsm/loaders/RGBELoader.js';
+                    			import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';
+                          import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
+                          import { ImprovedNoise } from 'https://threejs.org/examples/jsm/math/ImprovedNoise.js';
+
+                          var three = THREE;
+
+                          var scene = new three.Scene();
+
+                          var aspect = window.innerWidth / window.innerHeight;
+                          var d = 10;
+                          var camera = new THREE.OrthographicCamera( - d * aspect, d * aspect, d, - d, 1, 3000 );
+
+                          var container = document.getElementById( 'myCanvas' );
+          				            container.innerHTML = "";
+
+                          var raycaster = new THREE.Raycaster();
+                          var mouse = new THREE.Vector2();
+
+                          var renderer = new three.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true, alpha: true });
+                          renderer.outputEncoding = THREE.sRGBEncoding;
+                          renderer.setClearColor(0x00ff00, 0);
+                          renderer.setPixelRatio(window.devicePixelRatio);
+                          renderer.setSize(window.innerWidth, window.innerHeight);
+
+                          document.body.appendChild(renderer.domElement);
+
+                          document.body.addEventListener( 'mousemove', onMouseMove, false );
+
+                          var mouseX = 1, mouseY = 1;
+
+                    			var windowHalfX = window.innerWidth / 2;
+                    			var windowHalfY = window.innerHeight / 2;
+
+                    			animate();
+
+                          var light = new THREE.AmbientLight(0xffffff, 0.5);
+                          scene.add(light);
+
+                          var light2 = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.5 );
+                          scene.add( light2 );
+
+
+                          // method 1 - use lookAt
+                          //camera.position.set( 20, 20, 20 );
+                          //camera.lookAt( scene.position );
+
+                          // method 2 - set the x-component of rotation
+                          camera.position.set( 6, 6, 6 );
+                          camera.rotation.order = 'XYZ';
+                          camera.rotation.y = - Math.PI / 4;
+                          camera.rotation.x = Math.atan( - 1 / Math.sqrt( 2 ) );
+
+
+                          var controls = new OrbitControls( camera, renderer.domElement );
+                          controls.enableRotate = true;
+                          controls.enableZoom = false; // optional
+                        	controls.enablePan = false;
+                          controls.maxPolarAngle = Math.PI / 2;
+                          controls.minPolarAngle = Math.PI / 2.9;
+                          controls.minAzimuthAngle = Math.PI / 2;
+
+                          //controls.update() must be called after any manual changes to the camera's transform
+                          //camera.position.set( 0, 0, 100 );
+                          controls.update();
+
+
+
+                              /*---LOADERS -------------------------------------888-----------------------------------*/
+
+                            var loader = new GLTFLoader();
+
+                            loader.load( 'assets/block1.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+                            loader.userData = { URL: "http://isaulgarcia.com"};
+
+                            scene.add( gltf.scene );
+
+                            } );
+
+                            /*----------*/
+
+                            var loader2 = new GLTFLoader();
+
+                            loader2.load( 'assets/block2.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                            /*----------*/
+
+                            var loader3 = new GLTFLoader();
+
+                            loader3.load( 'assets/block3.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                            /*----------*/
+
+                            var loader4 = new GLTFLoader();
+
+                            loader4.load( 'assets/block4.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                            /*----------*/
+
+                            var loader5 = new GLTFLoader();
+
+                            loader5.load( 'assets/block5.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                            /*----------*/
+
+                            var loader6 = new GLTFLoader();
+
+                            loader6.load( 'assets/block6.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                            /*----------*/
+
+                            var loader7 = new GLTFLoader();
+
+                            loader7.load( 'assets/block7.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                            /*----------*/
+
+                            var loader8 = new GLTFLoader();
+
+                            loader8.load( 'assets/block8.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                            /*----------*/
+
+                            var loader9 = new GLTFLoader();
+
+                            loader9.load( 'assets/block9.glb', function ( gltf ) {
+                            gltf.scene.position.y = -2;
+                            gltf.scene.rotation.x = 0;
+
+                            gltf.scene.scale.set(3,3,3) // scale here
+
+                            scene.add( gltf.scene );
+                            } );
+
+                              /*----LOADERS ------------------------------------------------------------------------------------*/
+
+                          function onMouseMove( event ) {
+
+                          				mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
+                          				mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
+                          				raycaster.setFromCamera( mouse, camera );
+
+                          				// See if the ray from the camera into the world hits one of our meshes
+                          				var intersects = raycaster.intersectObject( scene.children, true );
+
+                          				// Toggle rotation bool for meshes that we clicked
+                          				if ( intersects.length > 0 ) {
+
+                          					helper.position.set( 0, 0, 0 );
+                          					helper.lookAt( intersects[ 0 ].face.normal );
+
+                          					helper.position.copy( intersects[ 0 ].point );
+
+                          				}
+
+                          			}
+
+                            function onMouseClick( event ) {
+
+                              if (intersects.length > 0) {
+                            window.open(intersects[0].object.userData.URL);
+                            }}
+
+
+                          function onWindowResize() {
+                    				windowHalfX = window.innerWidth / 2;
+                    				windowHalfY = window.innerHeight / 2;
+                    				camera.aspect = window.innerWidth / window.innerHeight;
+                    				camera.updateProjectionMatrix();
+
+                    				renderer.setSize( window.innerWidth, window.innerHeight );
+                    			}
+
+                          function animate() {
+                    				requestAnimationFrame( animate );
+                    				render();
+                    			}
+
+                          function render() {
+
+                            var speed = Date.now() * 0.00005;
+                            camera.position.x = Math.cos(speed) * 10;
+                            camera.position.z = Math.sin(speed) * 10;
+
+                      				camera.lookAt( scene.position );
+                      				renderer.render( scene, camera );
+                          }
+
+                          window.addEventListener( 'mousemove', onMouseMove, false );
+                          window.requestAnimationFrame(render);
+
+                    </script>
+                      </div>
+                  </div>
+
+                  </section>
+                </div>
+              </div>
+
+              <div class="plus">
+                <a href="#sw" style="cursor:pointer;">
+                  <strong>✛</strong>
+                </a>
+              </div>
+
+            <div class="page" id="p4">
+              <section class="icon">
+                <div class="gallery_container">
+                <div id="wid" class="wid">
+
+                  <div class="border">
+                    <a>
+                      <strong>SOMEWARE</strong>
+                    </a>
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Exploring place computing through video games.</strong>
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <iframe width="100%" height="340px" src="https://www.youtube.com/embed/XZFu--9sa8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Someware explores the concept of place computing.</strong>
+                      <br><br>
+                      Using place making as a tool to understand and augment our immediate context. The project emphasizes the process as the main outcome.
+                      <br><br>
+                      Its objective is to awcknowledge a place as a computing entity. Primarily to make the distinction between the internet as a world wide computer and the phone as a compact personal computer, this mutual computer stands somewhere in between.
+                      <br><br>
+                      Place computing is something that grows from the ground and not just the cloud. It a hybrid between the precence of what's there physically and virtually.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/ballroom.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Translating Realities</strong>
+                      <br><br>
+                      I scanned and took 360 images of my room to use as a base for virtual content.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Using the 3D scanning app 'Display.Land'.<br><br>
+                    </a>
+                      <img class="img_box" src="images/3Dscanroom.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Constructed with photogrammetry tools.<br><br>
+                    </a>
+                      <img class="img_box" src="images/360room.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      In that same manner I equipped my physical space with some self-made sensors to tether the content and add environmental interactions.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Prototyping and testing the sensors.<br><br>
+                    </a>
+                    <img class="img_box" src="images/firstsens.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Controlling the lights through local networks using a web interface.<br><br>
+                    </a>
+                      <img class="img_box" src="images/interfaceweb.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Embedding them into the environment.<br><br>
+                    </a>
+                      <img class="img_box" src="images/sens1.jpg">
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/sens2.jpg">
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/sens3.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Interactions with my place computer</strong><br><br>I began visualizing my room as my computer. What if I measured my furniture like I measured storage in my pc? What if my address was written like a link path? How would I navigate my furniture's metadata?
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/pwwui.jpg">
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/sw1.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Thethered interaction examples.<br><br>
+                    </a>
+                      <img class="img_box" src="images/swi1.gif">
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/swi2.gif">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>What does it mean to play a video game in my room computer?</strong>
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/guyfloor.png">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      My floor becomes the map and the environment my controller.<br><br>I created this first prototype to test the gameplay.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/swgameplay.gif">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Layering realities and place identity.</strong>
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/360roomX.jpg">
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/sw8.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      As I explored alternate realities living in my room, it became clear that the hybrid prescence was my identity. What I do inside my room both physically and virtually.<br><br>
+                      This exploration lead to the idea of places as platforms, place wide web and place computing. Bringing close attention to the word augmenting, rather that mixed realities, to slowly build our habitats into computers.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Content into Context</strong></br></br>Implementing a distributed back-end of things that anchors content into context.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/bcncircle.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Exploring alternate hybrid tethering and data flows.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/ballnet.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Multiplicity of Interactions</strong></br></br>Crossplay and scales of interaction as something to explore further. The objective is the virtual content in the sense of a prescence. The means of interaction could vary from different environmental inputs, game mechanics and purposes.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/devic.jpg">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      Everyone can participate, you just have to be here.
+                    </a>
+                  </div>
+
+                  <div class="border">
+                      <img class="img_box" src="images/mistersentadito.png">
+                  </div>
+
+                  <div class="border">
+                    <a>
+                      <strong>Thank you for your time.</strong></br></br>More about me here <a class="navlink grey" target="_blank" href="https://isaulgarcia.com">→ isaulgarcia.com </a><a class="navlink grey" target="_blank" href="https://instagram.com/ig.idt">→ Instagram </a><a class="navlink grey" href="mailto:isaul.josue@gmail.com">→ Email</a>
+                    </a>
+                  </div>
+
+                </div>
+
+
+
+              </section>
+              </div>
+
+
+
+
+            <script>
+
+                document.addEventListener("DOMContentLoaded", function() {
+                  var curtain = document.createElement("div")
+                  curtain.style.cssText = "position: fixed; top: 0; left: 0; z-index: 3; width: 100%; height: 100%; background: rgba(0,0,0,0.8) none 50% 50%/contain no-repeat; display: none"
+                  document.body.appendChild(curtain)
+                  curtain.onclick = function() { curtain.style.display = "none" }
+                  var boxes = document.getElementsByClassName("hellbox")
+                  for(var i=0; i<boxes.length; ++i) boxes[i].addEventListener("click", function(e) {
+                    e.preventDefault()
+                    curtain.style.backgroundImage = "url('"+e.target.parentNode.href+"')"
+                    curtain.style.display = "block"
+                  })
+                })
+
+                filterSelection("all")
+                function filterSelection(c) {
+                  var x, i;
+                  x = document.getElementsByClassName("filterDiv");
+                  if (c == "all") c = "";
+                  for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                  }
+                }
+
+                function w3AddClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                  }
+                }
+
+                function w3RemoveClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                      arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                  }
+                  element.className = arr1.join(" ");
+                }
+
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                  });
+                }
+
+
+                  function adjustStyle(width) {
+                    width = parseInt(width);
+                    if (width < 1300) {
+                      $("#size-stylesheet").attr("href", "css/narrow.css");
+                    } else {
+                       $("#size-stylesheet").attr("href", "css/style.css");
+                    }
+                  }
+
+                  $(function() {
+                    adjustStyle($(this).width());
+                    $(window).resize(function() {
+                      adjustStyle($(this).width());
+                    });
+                  });
+
+                </script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+</section>
+
+
+</body>
+
+
+</html>
