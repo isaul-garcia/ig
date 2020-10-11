@@ -110,10 +110,11 @@ canvas {
 }
 
 .wid {
-    margin-top: 4vh;
+    margin-top: 5vh;
     margin-left: 1vw;
     width: 40vw;
-    padding: 2vw;
+    padding: 1vw;
+    padding-left: 2vw;
     position: absolute;
     z-index: 2;
     overflow: scroll;
@@ -221,9 +222,9 @@ html, body, .page {
 }
 
 #p1 {pointer-events: none; -webkit-filter: blur(0px);}
-#p2 { background: rgba(0,0,0, 0.75);  opacity: 0; pointer-events: none; -webkit-filter: blur(30px);}
+#p2 { opacity: 1; pointer-events: none;}
 #p3 { opacity: 0; pointer-events: none; -webkit-filter: blur(30px);}
-#p4 { background: rgba(0,0,0, 0.5);  opacity: 0; pointer-events: none; -webkit-filter: blur(30px);}
+#p4 { background: rgba(0,0,0, 0.5);  opacity: 0; pointer-events: none; }
 
 #t2:target #p2,
 #sw:target #p3
@@ -250,7 +251,7 @@ html, body, .page {
 
 #sw:target #p2 .navlink,
 #t1:target #p2 .navlink {
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 #sw:target #p3 {
@@ -271,6 +272,10 @@ html, body, .page {
   -webkit-filter: blur(0px);
   pointer-events: auto;
   overflow: scroll;
+}
+
+#sw:target #p4 .navlink {
+  pointer-events: auto;
 }
 
 .page .icon {
@@ -381,9 +386,22 @@ html, body, .page {
   float: left;
   padding: 0.5vw;
   border: 1px #fff solid;
-  background-color: #000
+  background-color: #000;
+  position: sticky;
+
 }
 
 .grey {
   color: #0079e3;
+}
+
+.rit {
+  float: right;
+}
+
+.botim {
+  bottom: 0;
+  float: left;
+  position: absolute;
+  padding-top: 5vw;
 }
