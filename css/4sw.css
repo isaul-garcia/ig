@@ -57,9 +57,11 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 75px;
-  line-height: 60px;
+  font-size: 18px;
+  line-height: 18px;
   font-weight: 300;
+  text-decoration: none;
+  color: #0079e3;
 }
 
 a {
@@ -380,4 +382,8 @@ html, body, .page {
   padding: 0.5vw;
   border: 1px #fff solid;
   background-color: #000
+}
+
+.grey {
+  color: #0079e3;
 }
