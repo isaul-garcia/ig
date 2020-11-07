@@ -81,9 +81,28 @@ p {
   text-align: justify;
 }
 
+/* width */
 ::-webkit-scrollbar {
-    display: none;
+  width: 10px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border: 1px solid #8f8f8f;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8f8f8f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
+}
+
 
 /* --------------------------------------------- */
 
@@ -126,6 +145,15 @@ p {
   width: 15vw;
   float: left;
   display: inline;
+}
+
+.secdoc {
+  width: 50vw;
+  float: left;
+}
+
+.docimg {
+  width: 100%;
 }
 
 .sec2 {
