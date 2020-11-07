@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: isaulgarcia.com
+Token: e2636c9f46f0ef1506bab2689c30c1b55aad1f0d3e7337776e03cce412637b40
