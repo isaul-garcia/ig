@@ -292,9 +292,23 @@ canvas {
   }
 
   a {
-    font-size: 38px;
-    line-height: 38px;
+    font-size: 42px;
+    line-height: 42px;
   }
+
+h6, .h6 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+h5, .h5 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.paragraphbox {
+  width: 100%;
+}
 
   .iglogo {
     width: 100px;
