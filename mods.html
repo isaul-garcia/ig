@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zxx">
+<html>
 
 <head>
   <title>Isaul Garcia</title>
@@ -9,23 +9,154 @@
 </head>
 
 <body>
-<section class="todo">
+<section>
 
-    <div class="sec0">
-      <img class="iglogo L" src="images/ig_logo_round.svg">
+<div style="padding-left: 10vw; margin-top: 1vh;">
+  <div style="position:absolute; width: 100%; background-color: #f0f0f0; padding-bottom: 10px; float: left; top: 0;">
+      <a class="navlink mas" href="index.html">← Back</a>
+  </div>
+
+  <div class="secdoc">
+    <img class="docimg L" style="margin-bottom: 30px; margin-top: 2%;" src="images/mods1.png">
+
+    <div>
+      <h5><strong>MODs</strong><br>Urban, Interaction<br>BA ❘ 2016</h5>
+      <br>
     </div>
 
     <div>
-      <h6>
-        <a class="navlink" href="index.html">← Back</a>
-      </h6>
+      <div class="paragraphbox">
+        <h6>
+          Cities are important nodes of information and human interaction. MODs was designed as a hardware and software platform that would help the adoption of smart city technologies to public spaces and its inhabitants. The platform itself empowers citizens to understand how this technologies work and how they can be beneficial.<br><br>
+        </h6>
+      </div>
+
+      <div class="paragraphbox" style="margin-bottom: 30px;">
+        <h6>
+          Part of its purpose is to have an explicit operating system that would help people be aware and take better decisions when it comes to public computing.
+        </h6>
+      </div>
     </div>
 
-    <div class="sec3">
-      <object id="portal" type="text/html" class="portal" data="00mods.html">
-    </div>
+    <img class="docimg L" src="images/mods8.png">
+    <img class="docimg L" src="images/mods2.png">
+    <img class="docimg L" src="images/mods3.png">
+    <img class="docimg L" src="images/mods7.png">
+    <img class="docimg L" src="images/mods4.png">
+    <img class="docimg L" src="images/mods11.png">
+    <img class="docimg L" style="width: 50%;" src="images/mods9.png">
+    <img class="docimg L" src="images/mods5.png">
+    <img class="docimg L" src="images/mods10.png">
+
+  </div>
+</div>
+
+<div class="box_container">
+  <div>
+    <canvas id="myCanvas"></canvas>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script type="module">
+
+        import * as THREE from 'https://threejs.org/build/three.module.js';
+
+        import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+        import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
+        import { RGBELoader } from 'https://threejs.org/examples/jsm/loaders/RGBELoader.js';
+  			import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';
+        import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
+
+
+        var three = THREE;
+
+        var scene = new three.Scene();
+
+        var camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 3000); camera.position.set(0,0,750);
+
+        var renderer = new three.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true, alpha: true });
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        renderer.setClearColor(0x00ff00, 0);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        document.body.appendChild(renderer.domElement);
+
+        var mouseX = 1, mouseY = 1;
+
+  			var windowHalfX = window.innerWidth / 2;
+  			var windowHalfY = window.innerHeight / 2;
+
+  			animate();
+
+
+        var light = new THREE.AmbientLight(0xffffff, 0.1);
+        scene.add(light);
+
+        var light2 = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.4, 1, 0, 0.5 );
+        scene.add( light2 );
+
+
+        var loader = new GLTFLoader();
+
+        loader.load( 'assets/igmesh.glb', function ( gltf ) {
+        gltf.scene.position.y = 0;
+        gltf.scene.rotation.x = 1.75;
+
+        gltf.scene.scale.set(75,75,75) // scale here
+
+        scene.add( gltf.scene );
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+        } );
+
+
+        function onWindowResize() {
+
+  				windowHalfX = window.innerWidth / 2;
+  				windowHalfY = window.innerHeight / 2;
+
+  				camera.aspect = window.innerWidth / window.innerHeight;
+  				camera.updateProjectionMatrix();
+
+  				renderer.setSize( window.innerWidth, window.innerHeight );
+
+  			}
+
+
+
+        function onDocumentMouseMove( event ) {
+
+  				mouseX = ( event.clientX / -2 );
+  				mouseY = ( event.clientY / -2 );
+  			}
+
+
+        function animate() {
+
+  				requestAnimationFrame( animate );
+
+  				render();
+
+  			}
+
+        function render() {
+
+            camera.position.x += ( mouseX - camera.position.x + 5) * 0.05;
+    				camera.position.y += ( - mouseY - camera.position.y + 5) * 0.05;
+
+    				camera.lookAt( scene.position );
+
+    				renderer.render( scene, camera );
+        }
+
+
+      </script>
+  </div>
+</div>
 
 </section>
+
+
 </body>
 
 

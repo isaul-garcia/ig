@@ -1,6 +1,5 @@
 html {
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 
@@ -10,7 +9,7 @@ body {
   line-height: 1.7vw;
   background-color: #f0f0f0;
   cursor: default;
-  margin: 0.25vw;
+  margin: 0;
 }
 
 * {
@@ -19,7 +18,6 @@ body {
 
 a, h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, .h7, h8, .h8 {
   color: #8f8f8f;
-
 }
 
 h1, .h1 {
@@ -54,16 +52,15 @@ h4, .h4 {
 
 h5, .h5 {
   font-family: "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 100;
   text-decoration: none;
   margin: 0;
-  color: #fff;
 }
 
 h6, .h6 {
-    font-family: "Helvetica", sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 17px;
     line-height: 17px;
     font-weight: 100;
@@ -72,7 +69,7 @@ h6, .h6 {
 }
 
 a {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Arial", sans-serif;
   text-decoration: none;
 }
 
@@ -81,15 +78,25 @@ p {
   text-align: justify;
 }
 
+canvas {
+  display: block;
+  overflow: hidden;
+  margin-bottom: -10px;
+  margin-left: -47.25vw;
+  margin-top: -48.25vh;
+  position: absolute;
+  pointer-events: none;
+}
+
+/*-------------scrollbar---------------------*/
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border: 1px solid #8f8f8f;
+  background: #d1d1d1;
 
 }
 
@@ -103,9 +110,18 @@ p {
   background: #8f8f8f;
 }
 
-
 /* --------------------------------------------- */
 
+.stuff_container {
+  margin-top: 1vh;
+}
+
+.portal {
+  padding-top: 8vh;
+  padding-right: 2vh;
+  bottom: 0;
+
+}
 
 .todo {
   width: 100vw;
@@ -149,11 +165,14 @@ p {
 
 .secdoc {
   width: 50vw;
+  height: 98vh;
   float: left;
+  overflow-y: scroll;
 }
 
 .docimg {
   width: 100%;
+  margin-top: 4px;
 }
 
 .sec2 {
@@ -172,7 +191,7 @@ p {
   width: 45vw;
   float: left;
   display: inline;
-  padding-top: 12px;
+  z-index: 0;
 }
 
 .foot {
@@ -196,6 +215,7 @@ p {
 
 .iglogo {
   width: 75px;
+  opacity: 0;
 }
 
 .reveal {
@@ -211,20 +231,41 @@ p {
   display: block;
 }
 
+.paragraphbox {
+  width: 50%;
+}
+
 .desc {
   color: black;
   background-color: #f0f0f0;
   display: inline-block;
 }
 
+.button {
+    background-color: #8f8f8f;
+    border: none;
+    color: black;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    margin-top: -68px;
+    outline: none;
+}
+
 #portal {
-  position: relative;
+  position: absolute;
 }
 
 .portal {
   width:45vw;
   height:100vh;
-  margin-bottom:-8px
+}
+
+.box_container {
 }
 
 @media only screen and (max-width: 1100px) {
@@ -249,11 +290,27 @@ p {
   .bl {
     font-weight: 700;
   }
+
   a {
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 28px;
+    line-height: 28px;
   }
+
   .iglogo {
     width: 100px;
+    opacity: 1;
   }
+
+#myCanvas {
+  display: none;
+}
+
+.w {
+  display: none;
+}
+
+.secdoc {
+  width: 83vw;
+}
+
 }
