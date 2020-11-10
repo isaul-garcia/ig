@@ -157,34 +157,50 @@ canvas {
 
 /* --------------------------------------------- */
 
-.sec {
-  width: 15vw;
+
+.docbox {
+  width: 50vw;
+  padding-left: 10vw;
+  padding-top: 1vh;
+}
+
+.back {
+  margin-top: -0.8vh;
+  padding-bottom: 1vh;
+  width: 100%;
   float: left;
-  display: inline;
+  display: block;
 }
 
 .secdoc {
-  width: 50vw;
-  height: 98vh;
+  display: block;
+  width: 100%;
+  height: 92vh;
   float: left;
   overflow-y: scroll;
 }
 
+
 .docimg {
   width: 100%;
-  margin-top: 4px;
-}
-
-.sec2 {
-  width: 10vw;
-  float: left;
-  display: inline;
 }
 
 .sec0 {
     width: 10vw;
     float: left;
     display: inline;
+}
+
+.sec {
+  width: 15vw;
+  float: left;
+  display: inline;
+}
+
+.sec2 {
+  width: 10vw;
+  float: left;
+  display: inline;
 }
 
 .sec3 {
@@ -199,14 +215,6 @@ canvas {
   bottom: 0.25vw;
   right: 0.25vw;
   text-align: right;
-}
-
-.footel {
-  position: absolute;
-  bottom: 0.25vw;
-  left: 0.25vw;
-  text-align: left;
-
 }
 
 .sep {
@@ -268,23 +276,49 @@ canvas {
 .box_container {
 }
 
+.separator {
+  width: 100%;
+  border-top: 1px solid #8f8f8f;
+  display: none;
+}
+
 @media only screen and (max-width: 1100px) {
+
+  html {
+  }
+
+  body {
+      margin: 5vh;
+  }
+
+  .separator {
+    display: block;
+  }
+
   .sec {
     padding-top: 70px;
+    padding-bottom: 70px;
     width: 75vw;
   }
 
   .sec2 {
     padding-top: 70px;
+    padding-bottom: 70px;
     width: 75vw;
   }
 
   .sec0 {
+    padding-bottom: 70px;
     width: 85vw;
   }
 
 .portal {
   width: 100vw;
+}
+
+.back {
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
   .bl {
@@ -311,7 +345,7 @@ h5, .h5 {
 }
 
   .iglogo {
-    width: 100px;
+    width: 200px;
     opacity: 1;
   }
 
@@ -325,6 +359,15 @@ h5, .h5 {
 
 .secdoc {
   width: 83vw;
+  height: 85vh;
+}
+
+.docbox {
+  padding-left: 3vw;
+}
+
+.navlink:hover + .reveal {
+  display: none;
 }
 
 }
