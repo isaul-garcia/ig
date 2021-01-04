@@ -25,7 +25,9 @@
       ~ alert on 'roomx' to view in desktop mode
 -->
 
-<body>
+<body  id="stop-scrolling">
+  <div class="preloader"></div>
+
 <section>
 
 <div class="stuff_container">
@@ -258,6 +260,21 @@
 </div>
 
 </section>
+
+<script>
+
+function preloaderFadeOutInit(){
+$('.preloader').delay( 1000 ).fadeOut('slow');
+$('body').attr('id','');
+}
+// Window load function
+jQuery(window).on('load', function () {
+(function ($) {
+preloaderFadeOutInit();
+})(jQuery);
+});
+
+</script>
 
 
 </body>
