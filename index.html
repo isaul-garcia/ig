@@ -15,6 +15,7 @@
   <meta property="og:title" content="Isaul Garcia" />
   <meta property="og:description" content="Hello! ☺ My name is Isaúl García." />
   <meta property="og:image" content="http://isaulgarcia.com/images/webpreview.jpg"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 
 <!-- pending fixes: -->
@@ -25,7 +26,9 @@
       ~ alert on 'roomx' to view in desktop mode
 -->
 
-<body>
+<body  id="stop-scrolling">
+  <div class="preloader"></div>
+
 <section>
 
 <div class="stuff_container">
@@ -281,7 +284,20 @@
 </div>
 
 </section>
+<script>
 
+function preloaderFadeOutInit(){
+$('.preloader').delay( 1000 ).fadeOut('slow');
+$('body').attr('id','');
+}
+// Window load function
+jQuery(window).on('load', function () {
+(function ($) {
+preloaderFadeOutInit();
+})(jQuery);
+});
+
+</script>
 
 </body>
 

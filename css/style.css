@@ -426,9 +426,32 @@ canvas {
     color: black;
 }
 
+.preloader {
+position: absolute;
+top: 0;
+left: 0;
+bottom:0;
+right:0;
+width: 100%;
+height: 100vh;
+z-index: 99999999;
+background-image: url('../images/ig--loop.gif'); /* your icon gif file path */
+background-repeat: no-repeat;
+background-size: 90px 37px;
+background-color: #f4f4f4;
+background-position: center;
+}
+
+#stop-scrolling {
+height: 100% !important;
+overflow: hidden !important;
+}
+
+
 .m {
   display: none;
 }
+
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/

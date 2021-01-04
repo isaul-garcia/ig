@@ -6,9 +6,13 @@
   <title>Isaul Garcia | Archive</title>
   <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 
-<body>
+<body  id="stop-scrolling">
+
+  <div class="preloader"></div>
+
 <section>
 
 <div class="stuff_container">
@@ -300,6 +304,20 @@
   </div>
 </div>
 
+<script>
+
+function preloaderFadeOutInit(){
+$('.preloader').delay( 1000 ).fadeOut('slow');
+$('body').attr('id','');
+}
+// Window load function
+jQuery(window).on('load', function () {
+(function ($) {
+preloaderFadeOutInit();
+})(jQuery);
+});
+
+</script>
 </section>
 
 

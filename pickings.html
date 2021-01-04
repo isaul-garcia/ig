@@ -7,9 +7,13 @@
   <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 
-<body>
+<body  id="stop-scrolling">
+
+  <div class="preloader"></div>
+
 <section>
 
   <div class="w sec0" style="position:absolute;">
@@ -187,6 +191,19 @@ $('.draggable').each(function(i,el){
                     + Math.floor(Math.random()*99)
                     + Math.floor(Math.random()*99);
     $(el).css({left: tLeft, top: tTop,});
+});
+
+
+
+function preloaderFadeOutInit(){
+$('.preloader').delay( 1000 ).fadeOut('slow');
+$('body').attr('id','');
+}
+// Window load function
+jQuery(window).on('load', function () {
+(function ($) {
+preloaderFadeOutInit();
+})(jQuery);
 });
 
 </script>
