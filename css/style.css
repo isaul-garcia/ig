@@ -86,8 +86,8 @@ canvas {
   display: block;
   overflow: hidden;
   margin-bottom: -10px;
-  margin-left: -47.25vw;
-  margin-top: -48.25vh;
+  margin-left: -46.75vw;
+  margin-top: -48.5vh;
   position: absolute;
   pointer-events: none;
 }
@@ -127,8 +127,12 @@ canvas {
 }
 /* --------------------------------------------- */
 
+.navlin {
+  opacity: 0.5;
+}
+
 .stuff_container {
-  margin-top: 1vh;
+  margin-top: 2vh;
 }
 
 .portal {
@@ -158,7 +162,7 @@ canvas {
   transition: 0.3s;
 }
 
-.pointer {cursor: pointer;}
+.pointer {cursor: poin;}
 
 .L {
   float: left;
@@ -247,7 +251,7 @@ canvas {
 /* ------------------------ for portfolio pages --------------------- */
 
 .sec0 {
-    width: 10vw;
+    width: 12vw;
     float: left;
     display: inline;
 }
@@ -271,15 +275,44 @@ canvas {
   z-index: 0;
 }
 
+.sec4 {
+  margin-top: -2vh;
+  width: 9vw;
+  float: left;
+}
+
+.secbigpage {
+  margin-top: -2vh;
+  width: 70vw;
+  float: left;
+
+  display: block;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .foot {
   position: absolute;
-  bottom: 0.25vw;
-  right: 0.25vw;
+  bottom: 0.75vw;
+  right: 1vw;
   text-align: right;
+}
+
+.lefoot {
+  position: absolute;
+  bottom: 0.75vw;
+  left: -0.75vw;
+  text-align: left;
 }
 
 .sep {
   margin-right: 5vw;
+}
+
+.sepindv {
+  margin-right: 2vw;
+  border-right: 1px solid #8f8f8f;
+  height: 100vh;
 }
 
 .iglogo {
@@ -293,8 +326,9 @@ canvas {
 }
 
 .navlink:hover {
-  color: black;
+  color: #00ff00;
 }
+
 
 .navlink:hover + .reveal {
   display: block;
@@ -322,7 +356,7 @@ canvas {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer;
+    cursor: default;
     float: right;
     margin-top: -68px;
     outline: none;
@@ -367,12 +401,19 @@ canvas {
   background-color: rgba(255,255,255,0.4)
 }
 
+
+/*----------------- english spanish buttons ----------------------*/
+
 .en {
   display: none;
 }
 
 .es {
   display: block;
+}
+
+.forbutton {
+    margin-top: -5px;
 }
 
 .fontbutton {
@@ -384,12 +425,10 @@ canvas {
   background-color: #c9c9c9;
 }
 
-
-
 .border-es {
   padding: 3px;
   padding-right: 5px;
-  margin-right: 12px;
+  margin-right: 24px;
   border-left: 1px solid #8f8f8f;
   border-top: 1px solid #8f8f8f;
   border-bottom: 1px solid #8f8f8f;
@@ -411,8 +450,12 @@ canvas {
 
 .active-button {
   background-color: #c9c9c9;
-  color: black;
+  color: #383838;
 }
+
+
+
+
 
 .tagbutton {
     font-size: 12px;
@@ -452,8 +495,50 @@ overflow: hidden !important;
   display: none;
 }
 
+.graphxcontainer {
+  position: relative;
+  display: inline;
+  vertical-align: middle
+}
+
+.graphximgs {
+  width: 34vw;
+  padding: 1vw;
+  object-fit: contain;
+  transition: 0.2s;
+}
 
 
+/* ---------- aliases marquee graphx -----------*/
+
+.alias-slide {
+  height: 25px;
+  max-width: 21.75vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.alias-slide > div {
+  height: 147px;
+  width: 2250px;
+  background: url(../images/alias_longer.png);
+  background-size: 250px 25px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.alias-slide .mover-1 {
+  animation: moveSlideshow 15s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
@@ -573,5 +658,40 @@ h5, .h5 {
 .navlink:hover + .reveal {
   display: none;
 }
+
+
+/* --------spanish english buttons mobile -----------*/
+
+.forbutton {
+  margin-top: -158px;
+}
+
+.fontbutton {
+  font-size: 32px;
+  line-height: 0px;
+}
+
+.fontbutton:hover {
+  background-color: #c9c9c9;
+}
+
+
+
+.border-es {
+  padding: 23px;
+  padding-right: 25px;
+  margin-right: 12px;
+  border-radius: 0px 40px 40px 0px;
+}
+
+
+.border-en {
+  padding: 23px;
+  padding-left: 25px;
+  border-radius: 40px 0px 0px 40px;
+}
+
+
+/*---- uhm.. above this please ----*/
 
 }

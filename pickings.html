@@ -8,9 +8,14 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
 </head>
 
-<body  id="stop-scrolling">
+<body  id="stop-scrolling" class="noselect">
 
   <div class="preloader"></div>
 
@@ -28,11 +33,13 @@
 
 <div class="boardsbox">
 
-  <div class="secboards grid nobar" style="padding-top:90px;margin-top:3vh;"><br>
-    <div style="margin-left:15px;margin-top:-95px;position:absolute;">
-      <a class="h2" style="background-color: rgba(240,240,240,1);">Pickings</a><br>
-      <a class="h6" style="background-color: rgba(240,240,240,1);">As I wander, unlucky leaves and flowers become victims of my picking instincts.</a><br><br><br>
+  <div class="secboards gri d nobar" style="padding-top:90px;margin-top:3vh;"><br>
+
+    <div style="margin-top: -10vh;position:absolute; pointer-events: none">
+      <img class="L" style="width: 750px;position: absolute;" src="images/picks/as_i.png">
     </div>
+
+    <br></br>
 
     <img class="draggable" style="width:150px;height:350px;margin:-35px" src="images/picks/pick1.png">
     <img class="draggable" style="width:150px;height:180px;margin:-35px" src="images/picks/pick2.png">
@@ -58,6 +65,10 @@
     <img class="draggable" style="width:140px;height:440px;margin:-35px" src="images/picks/pick13.png"><br>
     <img class="draggable" style="width:130px;height:220px;margin:-35px;margin-left:-55px;" src="images/picks/pick23.png"><br>
     <img class="draggable" style="width:70px;height:150px;margin:-35px;margin-left:-75px;" src="images/picks/pick24.png">
+
+    <div class="R" style="margin-right:20vw;margin-top:15vh; pointer-events: none">
+      <img style="width: 230px;position: absolute;" src="images/picks/drag.png">
+    </div>
 
   </div>
 </div>
