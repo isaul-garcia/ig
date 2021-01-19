@@ -478,10 +478,10 @@ right:0;
 width: 100%;
 height: 100vh;
 z-index: 99999999;
-background-image: url('../images/ig--loop.gif'); /* your icon gif file path */
+background-image: url('../images/ig_logo_round.svg'); /* your icon gif file path */
 background-repeat: no-repeat;
 background-size: 90px 37px;
-background-color: #f4f4f4;
+background-color: black;
 background-position: center;
 }
 
