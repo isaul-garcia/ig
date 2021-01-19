@@ -339,8 +339,8 @@ canvas {
 }
 
 .desc {
-  color: black;
-  background-color: #f0f0f0;
+  color: #f0f0f0;
+  background-color: black;
   display: inline-block;
   line-height: 25px;
   margin-top: -10px;
