@@ -1,0 +1,1204 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.166667px;
+  line-height: 1.7vw;
+  background-color: black;
+  cursor: default;
+  margin: 0;
+  -webkit-scrollbar:none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, .h7, h8, .h8 {
+  color: #d1d1d1;
+}
+
+h1, .h1 {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 75px;
+  line-height: 70px;
+  font-weight: 900;
+}
+
+h2, .h2 {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3, .h3 {
+  font-family: "Yantramanav", sans-serif;
+    font-size: 2.25vh;
+    line-height: 2.25vh;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 0;
+}
+
+h4, .h4 {
+  font-family: "Yantramanav", sans-serif;
+    font-size: 4vh;
+    line-height: 4vh;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+}
+
+h5, .h5 {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 2vh;
+  line-height: 2vh;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0;
+}
+
+h6, .h6 {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0;
+}
+
+
+.h7 {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 1.75vh;
+  line-height: 1.75vh;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Yantramanav", sans-serif;
+  text-align: justify;
+}
+
+canvas {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+}
+
+article {
+
+}
+/*-------------------------------------------------------------- scrollbar ------------------------------------------------------*/
+
+/* -------- nobar --------*/
+
+.nobar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.nobar {
+  -webkit-scrollbar:none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scroll {
+  overflow-y: scroll;
+}
+
+.preloader {
+position: absolute;
+top: 0;
+left: 0;
+bottom:0;
+right:0;
+width: 100%;
+height: 100vh;
+z-index: 99999999;
+background-image: url('../images/ig-and-line-loader-01.svg'); /* your icon gif file path */
+background-repeat: no-repeat;
+background-size: 90px 37px;
+background-color: rgba(18, 18, 18, 1);
+background-position: center;
+}
+
+.preloader-x {
+position: absolute;
+top: 0;
+left: 0;
+bottom:0;
+right:0;
+width: 100%;
+height: 100vh;
+z-index: 99999999;
+background-repeat: no-repeat;
+background-size: 90px 37px;
+background-color: rgba(18, 18, 18, 1);
+background-position: center;
+}
+
+/* -------------------------------------------------- positions --------------------------------------------------------------- */
+
+.L {
+  float: left;
+  text-align: left;
+}
+
+.R {
+  float: right;
+  text-align: right;
+}
+
+.B {
+  bottom:0;
+}
+
+/* ------------------------------------------------------------ for board pages --------------------------------------------- */
+
+.whole-vp {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+}
+
+.full-window {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  display:block;
+}
+.proj-window {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  display:block;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  position: -webkit-sticky; /* Safari */
+ position: sticky;
+ top: 0;
+}
+
+#gallery{
+  opacity: 1;
+  pointer-events: all;
+  z-index: 101;
+
+      transition: all .7s ease-in-out;
+      -webkit-transition: all .7s ease-in-out;
+      -moz-transition: all .7s ease-in-out;
+      -o-transition: all .7s ease-in-out;
+}
+
+iframe {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px !important;
+}
+
+.box {
+  border: 1px solid black;
+
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+#ex-1 {
+  display: inline;
+  width: 75%;
+  height: 90%;
+  float: left;
+  overflow-y: scroll;
+  border-radius: 2vw;
+  opacity: 1;
+}
+
+#ex-2 {
+  display: inline;
+  width: 25%;
+  height: 60%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 1;
+}
+
+#ex-3 {
+  display: inline;
+  width: 100%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 1;
+}
+
+#ex-4 {
+  display: inline;
+  width: 0%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 0;
+}
+
+#ex-5 {
+  display: inline;
+  width: 0%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 0;
+}
+
+#ex-6 {
+  display: inline;
+  width: 0%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 0;
+}
+
+#ex-10 {
+  display: inline;
+  width: 0%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 0;
+}
+
+/* PORTFOLIO */
+#ex-7 {
+  display: inline;
+  width: 25%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 1;
+  position: relative;
+}
+
+/* OTHER STUFF */
+#ex-8 {
+  display: inline;
+  width: 25%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 1;
+}
+
+/* ELSEWHERE */
+#ex-9 {
+  display: inline;
+  width: 25%;
+  height: 10%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 1;
+}
+
+#ex-7B {
+  display: none;
+}
+
+/* OTHER STUFF */
+#ex-8B {
+  display: none;
+}
+
+/* ELSEWHERE */
+#ex-9B {
+  display: none;
+}
+
+/* inside portfolio */
+#ex-11 {
+  display: inline;
+  width: 25%;
+  height: 0%;
+  float: left;
+  overflow-y: scroll;
+  border-radius: 2vw;
+  opacity: 0;
+  border: none;
+  padding: 0;
+}
+/* inside other */
+#ex-12 {
+  display: inline;
+  width: 25%;
+  height: 0%;
+  float: left;
+  overflow-y: scroll;
+  border-radius: 2vw;
+  opacity: 0;
+  border: none;
+  padding: 0;
+}
+/* blackbox */
+#ex-13 {
+  display: inline;
+  width: 50%;
+  height: 0%;
+  float: left;
+  overflow-y: hidden;
+  border-radius: 2vw;
+  opacity: 0;
+  border: none;
+  padding: 0;
+}
+
+#nav-1 {
+  opacity: 1;
+  display: block;
+}
+
+#nav-2 {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#nav-3 {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#nav-4 {
+  opacity: 1;
+  display: block;
+}
+
+#nav-5 {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#nav-6 {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#nav-7 {
+  opacity: 1;
+  display: block;
+}
+
+#nav-8 {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+/* ---------------------------------------------------------  ---------------------------------------------------- */
+/* ------------------------------------------------------ prompts ------------------------------------------------ */
+/* ---------------------------------------------------------  ---------------------------------------------------- */
+
+/* -------------------------------------------------------- box 3 ------------------------------------------------ */
+  #box-3:target #ex-3 {
+      height: 40%;
+    }
+
+    #box-3:target #ex-1, #box-3:target #ex-2 {
+        height: 60%;
+    }
+/* -------------------------------------------------------- box 2 ------------------------------------------------ */
+  #box-2:target #ex-1 {
+      width: 25%;
+      height: 40%;
+    }
+
+    #box-2:target #ex-2 {
+        width: 75%;
+    }
+/* -------------------------------------------------------- box 4 ------------------------------------------------ */
+  #box-4:target #ex-6 {
+      width: 10%;
+      opacity: 1;
+    }
+
+    #box-4:target #ex-5 {
+        width: 10%;
+        opacity: 1;
+    }
+
+    #box-4:target #ex-4 {
+        width: 10%;
+        opacity: 1;
+    }
+
+    #box-4:target #ex-10 {
+        width: 10%;
+        opacity: 1;
+    }
+
+    #box-4:target #ex-3 {
+        width: 60%;
+    }
+    #box-4:target #nav-7 {
+        opacity: 0;
+        pointer-events: none;
+        display: none;
+    }
+    #box-4:target #nav-8 {
+        opacity: 1;
+        pointer-events: all;
+        display: block;
+    }
+/* -------------------------------------------------------- box 7 ------------------------------------------------ */
+  #box-7:target #ex-1 {
+      width: 50%;
+    }
+    #box-7:target #ex-2 {
+        height: 0%;
+        width: 50%;
+        border:none;
+        opacity: 0;
+    }
+    #box-7:target #ex-7 {
+        width: 50%;
+    }
+    #box-7:target #ex-8 {
+        height: 0%;
+        width: 50%;
+        opacity: 0;
+        border: none;
+    }
+    #box-7:target #ex-8.green{
+      padding: 0;
+    }
+    #box-7:target #ex-9 {
+        height: 0%;
+        width: 50%;
+        opacity: 0;
+        border: none;
+    }
+    #box-7:target #ex-9.green{
+      padding: 0;
+    }
+    #box-7:target #ex-11{
+      width: 50%;
+      height: 80%;
+      opacity: 1;
+      border: 1px solid black;
+    }
+    #box-7:target #nav-1 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #box-7:target #nav-2 {
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+    }
+/* -------------------------------------------------------- box 9 ------------------------------------------------ */
+  #box-9:target #ex-1 {
+    width: 30%;
+    height: 90%;
+    }
+    #box-9:target #ex-2 {
+        height: 0%;
+        width: 50%;
+        border:none;
+    }
+    #box-9:target #ex-7 {
+        width: 70%;
+        background-color: rgba(149, 0, 255,1);
+    }
+    #box-9:target #ex-8 {
+        height: 0%;
+        width: 50%;
+
+        border: none;
+    }
+    #box-9:target #ex-8.green{
+      padding: 0;
+    }
+    #box-9:target #ex-9 {
+        height: 0%;
+        width: 50%;
+
+        border: none;
+    }
+    #box-9:target #ex-9.green{
+      padding: 0;
+    }
+    #box-9:target #ex-11{
+      width: 70%;
+      height: 80%;
+      opacity: 1;
+      border: 1px solid black;
+      overflow-y: hidden;
+    }
+    #box-9:target #projs{
+      opacity: 1;
+      pointer-events: all;
+    }
+    #box-9:target #gallery{
+      opacity: 0;
+      pointer-events: none;
+    }
+    #box-9:target #nav-1 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #box-9:target #nav-2 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #box-9:target #nav-3 {
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+    }
+/* -------------------------------------------------------- box 8 ------------------------------------------------ */
+  #box-8:target #ex-1 {
+      width: 60%;
+    }
+    #box-8:target #ex-2 {
+        height: 0%;
+        width: 40%;
+        border:none;
+        opacity: 0;
+    }
+    #box-8:target #ex-7 {
+        width: 40%;
+        height: 0%;
+        opacity: 0;
+        border: none;
+    }
+    #box-8:target #ex-8 {
+        width: 40%;
+    }
+    #box-8:target #ex-7.green{
+      padding: 0;
+    }
+    #box-8:target #ex-9 {
+        height: 0%;
+        width: 40%;
+        border: none;
+        opacity: 0;
+    }
+    #box-8:target #ex-9.green{
+      padding: 0;
+    }
+    #box-8:target #ex-12{
+      width: 40%;
+      height: 80%;
+      opacity: 1;
+      border: 1px solid black;
+    }
+    #box-8:target #nav-4 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #box-8:target #nav-5 {
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+    }
+/* -------------------------------------------------------- box 20 ------------------------------------------------ */
+  #box-6:target #ex-1 {
+      width: 30%;
+    }
+    #box-6:target #ex-2 {
+        height: 0%;
+        width: 70%;
+        border:none;
+        opacity: 0;
+    }
+    #box-6:target #ex-7 {
+        width: 70%;
+        height: 0%;
+        opacity: 0;
+        border: none;
+    }
+    #box-6:target #ex-8 {
+        width: 70%;
+        background-color: red;
+    }
+    #box-6:target #ex-7.green{
+      padding: 0;
+    }
+    #box-6:target #ex-9 {
+        height: 0%;
+        width: 70%;
+        border: none;
+        opacity: 0;
+    }
+    #box-6:target #ex-9.green{
+      padding: 0;
+    }
+    #box-6:target #ex-12{
+      width: 70%;
+      height: 80%;
+      opacity: 1;
+      border: 1px solid black;
+    }
+    #box-6:target #nav-4 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #box-6:target #nav-5 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #box-6:target #nav-6 {
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+    }
+    #box-6:target #others{
+      opacity: 1;
+      pointer-events: all;
+    }
+    #box-6:target #gallery{
+      opacity: 0;
+      pointer-events: none;
+    }
+/* ----------------------------------------------------------  ---------------------------------------------------- */
+/* ------------------------------------------------------- prompts ------------------------------------------------ */
+/* ----------------------------------------------------------  ---------------------------------------------------- */
+
+/* ------------------------------------------------- radial pulse gradient ---------------------------------------- */
+.wrapper {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center,#F17C58, #8c00e3, #24AADB , #27DBB1,#FFDC18,#F17C58, #8c00e3, #24AADB , #27DBB1,#FFDC18,#F17C58, #8c00e3, #24AADB , #27DBB1);
+    background-size: 100vw 100vh;
+    background-position: center;
+    animation: gradient 6s linear infinite;
+    animation-direction: alternate;
+
+    animation-timing-function: ease-in-out;
+    animation-timing-function: cubic-bezier(1.3, 0.3, 0.6, 0.8);
+}
+@keyframes gradient {
+    0% {background-size: 80vw 160vh}
+    100% {background-size: 160vw 320vh}
+}
+.wrapper-2 {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+    background-size: 100vw 100vh;
+    background-position: center;
+}
+
+
+/* -------------------------------------------------------- titles and text ------------------------------------------------ */
+.blue {
+background-color: blue;
+}
+.black {
+  background-color: rgba(18, 18, 18, 1);
+}
+.black:hover {
+}
+.chinita {
+  background-color: rgba(255, 94, 0, 1);
+  padding: 3vh;
+}
+.chinita:hover {
+}
+.magenta {
+  background-color: rgba(149, 0, 255,1);
+}
+.magenta:hover {
+}
+.purple {
+  background-color: rgba(149, 0, 255,1);
+  padding: 3vh;
+}
+.purple:hover {
+}
+
+.grey {
+  background-color: rgba(235, 213, 23,1);
+  padding: 3vh;
+}
+
+.green {
+  background-color: rgba(75, 214, 60, 1);
+  padding: 3vh;
+}
+.green:hover {
+}
+
+.yellow {
+  background-color: rgba(209, 209, 209,1);
+  padding: 3vh;
+}
+.yellow:hover {
+}
+
+.isaul {
+  height: 25vh;
+  max-height: 25vw;
+  background-color: rgba(15,15,15,0.1);
+  padding: 1vw;
+}
+
+.big-title {
+  width: 100%;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+/* -------------------------------------------------------- for portfolio pages ------------------------------------------------ */
+
+.nav-button-minus {
+  margin-right: -0.85vh;
+  margin-top: -0.85vh;
+  width: 5.1vh;
+  background-color: rgba(18, 18, 18, 0.20);
+  border-radius: 2.75vh;
+  padding: 1.75vh;
+}
+
+.nav-button-plus {
+  margin-right: -0.85vh;
+  margin-top: 0vh;
+  width: 5vh;
+  height: 5vh;
+  background-color: rgba(18, 18, 18, 0.20);
+  border-radius: 2.75vh;
+  padding: 1.75vh;
+}
+
+
+
+/* separar botones clases }}} ponerle hover a lo chinita }}} ponerlo bien y ya ugh */
+
+
+
+/* ----------------------------------------- img images ------------------------------------------*/
+
+.img-l-container {
+  position: relative;
+}
+
+.img-links {
+  border-radius: 2vw;
+  height: 33.3%;
+  width: 33.3%;
+  object-fit: cover;
+  float: left;
+  border: 1px solid rgba(18, 18, 18, 1);
+  z-index: 70;
+}
+
+.img-links-tabs {
+  border-radius: 2vw;
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+  float: left;
+  border: 1px solid rgba(18, 18, 18, 1);
+}
+
+.img-inside {
+  width: 100%;
+}
+
+.img-fill {
+  height: 100%;
+  object-fit: cover;
+}
+
+.icons {
+    height: 10vh;
+    padding: 2.5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    opacity: 0.5;
+    z-index: 49;
+}
+
+/* ------------------------------------------ hovers -----------------------------------------------*/
+
+.linked {
+  opacity: 1;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+.linked:hover {
+  opacity: 0.8;
+}
+
+.secret {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+.secret:hover {
+  opacity: 1;
+}
+.moving-left
+{
+  height: 100px;
+
+  width: 100px;
+}
+.moving-left:hover
+{
+
+}
+.disc {
+  position: relative;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  opacity: 0;
+  z-index: 0;
+}
+
+.disc:hover {
+  z-index: 51;
+  opacity: 1;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.shrink {
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.shrink:hover {
+
+}
+/*---------------------------------------------- footer ------------------------------------------------------*/
+
+
+.footr {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  text-align: left;
+}
+
+.foot {
+  position: absolute;
+  bottom: 2vw;
+  right: 2vw;
+  text-align: right;
+}
+
+/*------------------------------------------------- pre loader stuff ---------------------------------------------------*/
+
+.edge-lines {
+  width: 3.5vh;
+}
+
+.tr {
+  float: right;
+  margin-right: 2vw;
+  margin-top: 2vw;
+}
+
+.tl {
+  float: left;
+  margin-left: 2vw;
+  margin-top: 2vw;
+}
+
+/*------------------------------------------------- tag buttons -------------------------------------------------------*/
+
+  .ap-circle {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: 0px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .ap-donut {
+    top: 20px;
+  }
+  .ap-donut:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    background: black;
+    border-radius: 50%;
+  }
+
+
+/* ---------------------------------------------------- nav and buttons ----------------------------------------------*/
+.proj-title {
+  position: absolute;
+  top: 1.5vh;
+  left: 1.5vh;
+  padding: 1vh;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+  background-color: rgba(18, 18, 18, 0.45);
+  border-radius: 5vh;
+  pointer-events: none;
+}
+
+.proj-tags {
+  padding-left: 1.5vh;
+  position: absolute;
+  pointer-events: none;
+  color: black;
+  z-index: 80;
+}
+
+#tags {
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+#proj-img:hover + #tags {
+  opacity: 1;
+}
+
+.mar-1 {
+  margin-left: 33.3%;
+}
+
+.mar-2 {
+  margin-left: 66.6%
+}
+
+
+.tagbutton {
+    font-size: 12px;
+    line-height: 24px;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 10px;
+    background-color: rgba(212,212,212,0.65);
+    color: black;
+}
+
+.edge-button {
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+  border: 1px solid #c9c9c9;
+  background-color: #ffffff;
+  color: #8f8f8f;
+  padding: 5px;
+  padding-left: 13.75px;
+  padding-right: 13.75px;
+  text-align: center;
+  border-radius: 70px;
+  font-size: 25px;
+  z-index: 40;
+  position: absolute;
+  opacity: 0.2;
+  display: block;
+}
+
+.edge-button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+}
+
+.top-left {
+margin-left: 0.75vw;
+margin-top: 0.75vw;}
+
+.top-right {
+margin-right: 0.75vw;
+margin-top: 0.75vw;}
+
+.bottom-left {bottom: 0.75vw;margin-left: 0.75vw;}
+.bottom-right {bottom: 0.75vw;right: 0.75vw;text-align: right; float: right;}
+
+/* ------------------------------------------------- aliases marquee graphx -------------------------------------------------------*/
+
+.alias-slide {
+  height: 45px;
+  max-width: 150vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+}
+
+.alias-slide > div {
+  height: 147px;
+  width: 3550px;
+  background: url(../images/alias_longer.png);
+  background-size: 450px 45px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.alias-slide .mover-1 {
+  animation: moveSlideshow 15s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+.aliases {
+  margin-top: -0.95vh;
+  margin-left: -1.1vh;
+  height: 5.75vh;
+  background-color: rgba(18,18,18,0.25);
+  padding: 1.5vh;
+  padding-left: 2.5vh;
+  padding-right: 2.5vh;
+  border-radius: 3vh;
+}
+
+
+#pulse {
+  opacity:1;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+
+#pulse:hover {
+    opacity: 0.5;
+}
+
+/* ------------------------------------------------ toggle for mobile desktop --------------------------------------------------*/
+
+.d {
+  display: contents;
+}
+
+.m {
+  display: none;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------moblie--------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 1100px) {
+
+  html {
+  }
+
+  body {
+  }
+
+  .paragraphbox {
+    width: 100%;
+  }
+
+  .d {
+    display: none;
+  }
+
+  .m {
+    display: contents;
+  }
+
+  .secdoc {
+    width: 83vw;
+    height: 80vh;
+  }
+
+  .docbox {
+    padding-left: 3vw;
+  }
+
+}

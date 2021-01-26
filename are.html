@@ -6,28 +6,36 @@
   <title>Isaul Garcia | AR E</title>
   <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <script>
+  window.onload = function preLoad(){
+    document.querySelector(".preloader-x").style.opacity = "0";
+    setTimeout(function turnOff(){
+      document.querySelector(".preloader-x").style.display = "none";
+  }, 100);
+   }
+  </script>
 </head>
 
 <body>
+  <div class="box preloader-x"></div>
+    <div class="progressCounter" style="z-index: 99999"></div>
+
 <section>
 
-<div class="docbox">
-  <div class="back">
-      <a class="navlink mas" href="index.html">← Back</a>
-  </div>
-
   <div class="secdoc">
-    <img class="docimg L" style="margin-bottom: 30px;" src="images/are.jpg">
+    <img class="docimg L coverimg" src="images/are.jpg">
 
-    <div>
-      <h5><strong>AR-E</strong><br>MA ❘ 2019</h5>
+    <div class="projtitle">
+      <div style="padding-left:3vw;margin-top:-12vh;z-index:2;">
+        <h5 style="font-size:28px;line-height:28px;color: #f0f0f0;z-index:2;"><strong>AR-E</strong><br>MA ❘ 2019 ❘ Doodling relationships in the natural ecosystem.</h5>
         <div>
           <a class="tagbutton">Augmented Reality</a><a class="tagbutton">Art</a><a class="tagbutton">Conceptual</a><a class="tagbutton">Infographic</a>
         </div>
       <br>
     </div>
+  </div>
 
-    <div>
+    <div style="padding-left:3vw;">
       <div class="paragraphbox">
         <h6>
           With an augmented reality paint app, I began doodling relationships in the natural ecosystem, revealing information of its own unintentional links. AR-E served as a representation of life cycles. This was later replicated on a human environment, evidencing the lack of self continuance. The human is in charge of all responsabilities to maintain this closed environment. The environment remains unresponsive of its own or neighboring necessities.<br><br>
@@ -41,116 +49,22 @@
       </div>
     </div>
 
-    <iframe width="100%" height="525px" src="https://www.youtube.com/embed/IdryDr3Z9XY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="100%" height="525px" src="https://www.youtube.com/embed/S55aCkoM6FY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+    <div  style="padding-left:3vw;padding-bottom:3vw;">
+    <iframe width="97%" height="525px" src="https://www.youtube.com/embed/IdryDr3Z9XY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="97%" height="525px" src="https://www.youtube.com/embed/S55aCkoM6FY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-</div>
 
-<div class="box_container">
-  <div>
-    <canvas id="myCanvas"></canvas>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-      <script type="module">
-
-        import * as THREE from 'https://threejs.org/build/three.module.js';
-
-        import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
-        import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
-        import { RGBELoader } from 'https://threejs.org/examples/jsm/loaders/RGBELoader.js';
-  			import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';
-        import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
-
-
-        var three = THREE;
-
-        var scene = new three.Scene();
-
-        var camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 3000); camera.position.set(0,0,750);
-
-        var renderer = new three.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true, alpha: true });
-        renderer.outputEncoding = THREE.sRGBEncoding;
-        renderer.setClearColor(0x00ff00, 0);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
-        document.body.appendChild(renderer.domElement);
-
-        var mouseX = 1, mouseY = 1;
-
-  			var windowHalfX = window.innerWidth / 2;
-  			var windowHalfY = window.innerHeight / 2;
-
-  			animate();
-
-
-        var light = new THREE.AmbientLight(0xffffff, 0.1);
-        scene.add(light);
-
-        var light2 = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.4, 1, 0, 0.5 );
-        scene.add( light2 );
-
-
-        var loader = new GLTFLoader();
-
-        loader.load( 'assets/igmesh.glb', function ( gltf ) {
-        gltf.scene.position.y = 0;
-        gltf.scene.rotation.x = 1.75;
-
-        gltf.scene.scale.set(75,75,75) // scale here
-
-        scene.add( gltf.scene );
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-        } );
-
-
-        function onWindowResize() {
-
-  				windowHalfX = window.innerWidth / 2;
-  				windowHalfY = window.innerHeight / 2;
-
-  				camera.aspect = window.innerWidth / window.innerHeight;
-  				camera.updateProjectionMatrix();
-
-  				renderer.setSize( window.innerWidth, window.innerHeight );
-
-  			}
-
-
-
-        function onDocumentMouseMove( event ) {
-
-  				mouseX = ( event.clientX / -2 );
-  				mouseY = ( event.clientY / -2 );
-  			}
-
-
-        function animate() {
-
-  				requestAnimationFrame( animate );
-
-  				render();
-
-  			}
-
-        function render() {
-
-            camera.position.x += ( mouseX - camera.position.x + 5) * 0.05;
-    				camera.position.y += ( - mouseY - camera.position.y + 5) * 0.05;
-
-    				camera.lookAt( scene.position );
-
-    				renderer.render( scene, camera );
-        }
-
-
-      </script>
   </div>
 </div>
 
 </section>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="./jquery.progressScroll.min.js"></script>
+<script>
+    $(".progressCounter").progressScroll();
+</script>
 
 
 </body>

@@ -292,18 +292,17 @@
               <div class="page rit" id="p2" style="z-index: 50000;">
 
               <div class="plus">
-                <a class="navlink" href="#sw" style="cursor:pointer;">
-                  <strong>More</strong>
+                <a class="navlink" onclick="location.href='#sw';showInformation()" id="show" style="cursor:pointer;">
+
                 </a>
-                <a>|</a>
-                <a class="navlink" style="margin-left: 10px;" href="#" style="cursor:pointer;">
-                  <strong>Hide</strong>
+                <a class="navlink" onclick="location.href='#';hideInformation()" id="hide" style="cursor:pointer;">
+                  ▬
                 </a>
               </div>
 
               <!--div class="plus rit">
                 <a class="navlink"href="index.html" style="cursor:pointer;">
-                  <strong>isaulgarcia.com</strong>
+                  <u>isaulgarcia.com</u>
                 </a>
               </div-->
 
@@ -322,13 +321,13 @@
 
                   <div class="border">
                     <a>
-                      <strong>SOMEWARE</strong><br><br><br>
+                      <u>SOMEWARE</u><br><br><br>
                     </a>
                   </div>
 
                   <div class="border">
                     <a>
-                      <strong>Exploring place computing through video games.</strong>
+                      <u>Exploring place computing through video games.</u>
                     </a>
                   </div>
 
@@ -338,7 +337,7 @@
 
                   <div class="border">
                     <a>
-                      <strong>Someware explores the concept of place computing.</strong>
+                      <u>Someware explores the concept of place computing.</u>
                       <br><br>
                       Using place making as a tool to understand and augment our immediate context. The project emphasizes the process as the main outcome.
                       <br><br>
@@ -354,7 +353,7 @@
 
                   <div class="border">
                     <a>
-                      <strong>Translating Realities</strong>
+                      <u>Translating Realities</u>
                       <br><br>
                       I scanned and took 360 images of my room to use as a base for virtual content.
                     </a>
@@ -411,7 +410,7 @@
 
                   <div class="border">
                     <a>
-                      <strong>Interactions with my place computer</strong><br><br>I began visualizing my room as my computer. What if I measured my furniture like I measured storage in my pc? What if my address was written like a link path? How would I navigate my furniture's metadata?
+                      <u>Interactions with my place computer</u><br><br>I began visualizing my room as my computer. What if I measured my furniture like I measured storage in my pc? What if my address was written like a link path? How would I navigate my furniture's metadata?
                     </a>
                   </div>
 
@@ -436,7 +435,7 @@
 
                   <div class="border">
                     <a>
-                      <strong>What does it mean to play a video game in my room computer?</strong>
+                      <u>What does it mean to play a video game in my room computer?</u>
                     </a>
                   </div>
 
@@ -456,13 +455,13 @@
 
                   <div class="border" style="background-color: yellow;">
                     <a class="gamedemo" href="https://isauljosue.gitlab.io/isaul.garcia/gam0/index.html">
-                      <strong>CLICK HERE TO PLAY THE (very buggy) GAME DEMO →</strong>
+                      <u>CLICK HERE TO PLAY THE (very buggy) GAME DEMO →</u>
                     </a>
                   </div>
 
                   <div class="border">
                     <a>
-                      <strong>Layering realities and place identity.</strong>
+                      <u>Layering realities and place identity.</u>
                     </a>
                   </div>
 
@@ -483,7 +482,7 @@
 
                   <div class="border">
                     <a>
-                      <strong>Content into Context</strong></br></br>Implementing a distributed back-end of things that anchors content into context.
+                      <u>Content into Context</u></br></br>Implementing a distributed back-end of things that anchors content into context.
                     </a>
                   </div>
 
@@ -503,7 +502,7 @@
 
                   <div class="border">
                     <a>
-                      <strong>Multiplicity of Interactions</strong></br></br>Crossplay and scales of interaction as something to explore further. The objective is the virtual content in the sense of a prescence. The means of interaction could vary from different environmental inputs, game mechanics and purposes.
+                      <u>Multiplicity of Interactions</u></br></br>Crossplay and scales of interaction as something to explore further. The objective is the virtual content in the sense of a prescence. The means of interaction could vary from different environmental inputs, game mechanics and purposes.
                     </a>
                   </div>
 
@@ -523,7 +522,7 @@
 
                   <div class="border">
                     <a>
-                      <strong>Thank you for your time.</strong></br></br>More about me here <a class="navlink" target="_blank" href="https://isaulgarcia.com">→ isaulgarcia.com </a><a class="navlink" target="_blank" href="https://instagram.com/ig.idt">→ Instagram </a><a class="navlink" href="mailto:isaul.josue@gmail.com">→ Email</a>
+                      <u>Thank you for your time.</u></br></br>More about me here <a class="navlink" target="_blank" href="https://isaulgarcia.com">→ isaulgarcia.com </a><a class="navlink" target="_blank" href="https://instagram.com/ig.idt">→ Instagram </a><a class="navlink" href="mailto:isaul.josue@gmail.com">→ Email</a>
                     </a>
                   </div>
 
@@ -538,6 +537,15 @@
 
 
             <script>
+
+            function showInformation() {
+            document.getElementById("show").innerHTML = "";
+            document.getElementById("hide").innerHTML = "▬";
+            }
+            function hideInformation() {
+            document.getElementById("hide").innerHTML = "";
+            document.getElementById("show").innerHTML = "✚";
+            }
 
                 document.addEventListener("DOMContentLoaded", function() {
                   var curtain = document.createElement("div")

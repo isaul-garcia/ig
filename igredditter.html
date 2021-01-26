@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <title>Isaul Garcia</title>
+  <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/OLD-style.css" />
+
+</head>
+
+
+
+<body>
+<section>
+  <div class="box_container">
+      <div id="t1">
+        <div id="t2">
+          <div id="t3">
+            <div id="t4">
+
+
+
+
+            <div class="page" id="p1">
+                  <section class="icon">
+
+                    <!--div class="header">
+                      <div class="navtext">
+                        <h4 class="stretch L">
+                          <a class="navlink grey" href="#t2">About</a>
+                        </h4>
+                      </div>
+                      <div class="navtext">
+                      </div>
+                    </div>
+
+                    <div class="footer">
+                      <div class="navtext">
+                        <h4 class="stretch L">
+                          <a class="navlink grey" href="#t3">Projects</a>
+                        </h4>
+                      </div>
+                      <div class="navtext">
+                        <h4 class="stretch R">
+                          <a class="navlink grey" target="_blank" href="https://instagram.com/ig.idt">Instagram</a>
+                        </h4>
+                      </div>
+                    </div>
+
+                  <div id="mid" class="mid">
+                    <div class="L">
+                      <h2>
+                        <a class="isaul">Isaúl García</a>
+                      </h2>
+                      <div>
+                      <h3>
+                        <a class="otro">I’m a designer and a creative coder.<br>
+                           Interested in interaction design and the future of place making.</a>
+                      </h3>
+                      </div>
+                    </div>
+                  </div-->
+
+                  <div>
+                    <div>
+                      <canvas id="myCanvas"></canvas>
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+                        <script type="module">
+
+                          import * as THREE from 'https://threejs.org/build/three.module.js';
+
+                          import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+                          import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
+                          import { RGBELoader } from 'https://threejs.org/examples/jsm/loaders/RGBELoader.js';
+                    			import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';
+                          import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
+
+
+                          var three = THREE;
+
+                          var scene = new three.Scene();
+
+                          var camera = new THREE.PerspectiveCamera(5, window.innerWidth/window.innerHeight, 0.1, 3000); camera.position.set(0,0,750);
+
+                          var renderer = new three.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true, alpha: true });
+                          renderer.outputEncoding = THREE.sRGBEncoding;
+                          renderer.setClearColor(0x000000, 0);
+                          renderer.setPixelRatio(window.devicePixelRatio);
+                          renderer.setSize(window.innerWidth, window.innerHeight);
+
+                          document.body.appendChild(renderer.domElement);
+
+                          window.addEventListener('resize', function()
+                          {
+                            var width = window.innerWidth;
+                            var height = window.innerHeight;
+                            renderer.setSize(width,height);
+                            camera.aspect = width / height;
+                            camera.updateProjectionMatrix();
+                          });
+
+
+                          var mouseX = 1, mouseY = 1;
+
+                    			var windowHalfX = window.innerWidth / 2;
+                    			var windowHalfY = window.innerHeight / 2;
+
+                    			animate();
+
+
+                          var light = new THREE.AmbientLight(0xffffff, 0.5);
+                          scene.add(light);
+
+                          var light2 = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.5 );
+                          scene.add( light2 );
+
+                          var controls = new OrbitControls( camera, renderer.domElement );
+                          controls.enableRotate = true;
+                          controls.enableZoom = false; // optional
+                        	controls.enablePan = false;
+                          controls.update();
+
+                          var model;
+                          var loader = new GLTFLoader();
+
+                          loader.load( 'assets/ig-ditter-red.glb', function ( gltf ) {
+                          gltf.scene.position.y = 0;
+                          gltf.scene.rotation.x = 1;
+                          gltf.scene.scale.set(60,60,60) // scale here
+
+                          model = gltf.scene;
+                          scene.add(model);
+
+                          document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                          } );
+
+
+                          function onWindowResize() {
+
+                            camera.aspect = window.innerWidth / window.innerHeight;
+                    				camera.updateProjectionMatrix();
+
+                    				renderer.setSize( window.innerWidth, window.innerHeight );
+
+                    				render();
+
+                    			}
+
+
+
+                          function onDocumentMouseMove( event ) {
+
+                    				mouseX = ( event.clientX - windowHalfX );
+                    				mouseY = ( event.clientY - windowHalfY );
+                    			}
+
+
+                          function animate() {
+
+                    				requestAnimationFrame( animate );
+
+                    				render();
+
+                    			}
+
+                          function render() {
+
+                            if (model) model.rotation.x += 0.002;
+                            if (model) model.rotation.y += 0.001;
+
+                      				camera.lookAt( scene.position );
+
+                      				renderer.render( scene, camera );
+                          }
+
+
+                        </script>
+                      </div>
+                  </div>
+
+                  </section>
+                </div>
+              </div>
+
+            <script>
+
+                document.addEventListener("DOMContentLoaded", function() {
+                  var curtain = document.createElement("div")
+                  curtain.style.cssText = "position: fixed; top: 0; left: 0; z-index: 3; width: 100%; height: 100%; background: rgba(0,0,0,0.8) none 50% 50%/contain no-repeat; display: none"
+                  document.body.appendChild(curtain)
+                  curtain.onclick = function() { curtain.style.display = "none" }
+                  var boxes = document.getElementsByClassName("hellbox")
+                  for(var i=0; i<boxes.length; ++i) boxes[i].addEventListener("click", function(e) {
+                    e.preventDefault()
+                    curtain.style.backgroundImage = "url('"+e.target.parentNode.href+"')"
+                    curtain.style.display = "block"
+                  })
+                })
+
+                filterSelection("all")
+                function filterSelection(c) {
+                  var x, i;
+                  x = document.getElementsByClassName("filterDiv");
+                  if (c == "all") c = "";
+                  for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                  }
+                }
+
+                function w3AddClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                  }
+                }
+
+                function w3RemoveClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                      arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                  }
+                  element.className = arr1.join(" ");
+                }
+
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                  });
+                }
+
+                </script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+</section>
+
+
+</body>
+
+
+</html>

@@ -10,9 +10,10 @@ body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.166667px;
   line-height: 1.7vw;
-  background-color: #f0f0f0;
+  background-color: rgba(18, 18, 18, 1);
   cursor: default;
   margin: 0;
+  position: absolute;
 }
 
 * {
@@ -95,23 +96,7 @@ canvas {
 /*-------------scrollbar---------------------*/
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #d1d1d1;
-
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #8f8f8f;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #8f8f8f;
+  display: none;
 }
 
 /* -------- nobar --------*/
@@ -177,7 +162,7 @@ canvas {
 /* --------------------------------------------- */
 
 .grid {
-  background: url('../images/gridoo.png') repeat;
+  background: url('../images/ig_logo_round.svg') repeat;
 }
 
 /* --------------------------------------------- */
@@ -238,16 +223,28 @@ canvas {
 
 .secdoc {
   display: block;
-  width: 100%;
-  height: 91vh;
   float: left;
-  overflow-y: scroll;
 }
 
 .docimg {
   width: 100%;
 }
 
+.coverimg {
+  height: 100vh;
+  object-fit: cover;
+  margin-bottom: -20vh;
+  z-index: 0;
+}
+
+.projtitle {
+  background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(18,18,18,0) 100%);
+  height: 20vh;
+  width: 100%;
+  position: relative;
+  margin-top: 95vh;
+  z-index: 1;
+}
 /* ------------------------ for portfolio pages --------------------- */
 
 .sec0 {
@@ -282,10 +279,9 @@ canvas {
 }
 
 .secbigpage {
-  margin-top: -2vh;
-  width: 70vw;
+  width: 100vw;
   float: left;
-
+  padding-left: 9vw;
   display: block;
   height: 100vh;
   overflow-y: scroll;
@@ -293,9 +289,16 @@ canvas {
 
 .foot {
   position: absolute;
-  bottom: 0.75vw;
-  right: 1vw;
+  bottom: 2vw;
+  right: 2vw;
   text-align: right;
+}
+
+.footr {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  text-align: left;
 }
 
 .lefoot {
@@ -326,12 +329,11 @@ canvas {
 }
 
 .navlink:hover {
-  color: #00ff00;
+  color: white;
 }
 
 
 .navlink:hover + .reveal {
-  display: block;
 }
 
 .paragraphbox {
@@ -458,15 +460,14 @@ canvas {
 
 
 .tagbutton {
-    font-size: 12px;
-    line-height: 24px;
-    padding: 3px;
-    padding-left: 6px;
-    padding-right: 6px;
-    border: 1px solid #8f8f8f;
-    border-radius: 10px;
-    background-color: #c9c9c9;
-    color: black;
+  font-size: 20px;
+  line-height: 38px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30px;
+  background-color: rgba(212,212,212,0.65);
+  color: black;
 }
 
 .preloader {
@@ -475,14 +476,59 @@ top: 0;
 left: 0;
 bottom:0;
 right:0;
+opacity: 1;
 width: 100%;
 height: 100vh;
 z-index: 99999999;
 background-image: url('../images/ig--loop.gif'); /* your icon gif file path */
 background-repeat: no-repeat;
 background-size: 90px 37px;
-background-color: #f4f4f4;
+background-color: rgba(18, 18, 18, 1);
 background-position: center;
+border-radius: 2vw;
+
+transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+}
+
+.preloader-x {
+position: absolute;
+opacity: 1;
+top: 0;
+left: 0;
+bottom:0;
+right:0;
+width: 100%;
+height: 100vh;
+z-index: 99999999;
+background-repeat: no-repeat;
+background-size: 90px 37px;
+background-color: rgba(18, 18, 18, 1);
+background-position: center;
+border-radius: 2vw;
+
+transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+}
+
+.edge-lines {
+  width: 3.5vh;
+}
+
+.tr {
+  float: right;
+  margin-right: 2vw;
+  margin-top: 2vw;
+}
+
+.tl {
+  float: left;
+  margin-left: 2vw;
+  margin-top: 2vw;
 }
 
 #stop-scrolling {
@@ -502,7 +548,7 @@ overflow: hidden !important;
 }
 
 .graphximgs {
-  width: 34vw;
+  width: 45%;
   padding: 1vw;
   object-fit: contain;
   transition: 0.2s;
@@ -539,6 +585,8 @@ overflow: hidden !important;
     transform: translateX(-66.6666%);
   }
 }
+
+
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
@@ -557,41 +605,7 @@ overflow: hidden !important;
   }
 
   body {
-      margin: 5vh;
-  }
-
-  .separator {
-    display: block;
-  }
-
-  .sec {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    width: 75vw;
-  }
-
-  .sec2 {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    width: 75vw;
-  }
-
-  .sec0 {
-    padding-bottom: 30px;
-    width: 85vw;
-  }
-
-.portal {
-  width: 100vw;
-}
-
-.back {
-  padding-top: 20px;
-  padding-bottom: 15px;
-}
-
-  .bl {
-    font-weight: 700;
+    margin: 0vh;
   }
 
   a {
@@ -611,84 +625,6 @@ h5, .h5 {
 
 .paragraphbox {
   width: 100%;
-}
-
-  .iglogo {
-    width: 130px;
-    opacity: 1;
-    margin-left: 3vw;
-  }
-
-#myCanvas {
-  display: none;
-}
-
-.w {
-  display: none;
-}
-
-.m {
-  display: contents;
-}
-
-.secdoc {
-  width: 83vw;
-  height: 80vh;
-}
-
-.secexpand {
-  width: vw;
-  height: 80vh;
-}
-
-
-.docbox {
-  padding-left: 3vw;
-}
-
-.secboards {
-  width: 80vw;
-  height: 78vh;
-}
-
-.boardsbox {
-  padding-left: 2vw;
-}
-
-.navlink:hover + .reveal {
-  display: none;
-}
-
-
-/* --------spanish english buttons mobile -----------*/
-
-.forbutton {
-  margin-top: -158px;
-}
-
-.fontbutton {
-  font-size: 32px;
-  line-height: 0px;
-}
-
-.fontbutton:hover {
-  background-color: #c9c9c9;
-}
-
-
-
-.border-es {
-  padding: 23px;
-  padding-right: 25px;
-  margin-right: 12px;
-  border-radius: 0px 40px 40px 0px;
-}
-
-
-.border-en {
-  padding: 23px;
-  padding-left: 25px;
-  border-radius: 40px 0px 0px 40px;
 }
 
 

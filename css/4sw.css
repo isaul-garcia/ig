@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
 
 html {
   overflow-x: hidden;
@@ -24,7 +25,7 @@ p {
 
 a, h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h7, .h7, h8, .h8 {
   color: #fff;
-  font-family: "Cutive Mono", san-serif;
+  font-family: "VT323", san-serif;
 }
 
 h1, .h1 {
@@ -68,7 +69,7 @@ h6, .h6 {
 a {
   font-size: 22px;
   line-height: 22px;
-  font-weight: 300;
+  font-weight: 100;
   text-decoration: none;
 }
 
