@@ -124,6 +124,19 @@ article {
   scrollbar-width: none;  /* Firefox */
 }
 
+.grabba {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.grabba:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
 .scroll {
   overflow-y: scroll;
 }

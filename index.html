@@ -62,8 +62,8 @@ code general clean up and notes
         <a class="linked m" id="nav-8" href="#home"><img class="nav-button-back R m" src="images/back-sq-01.svg"></a>
 
         <div class="thecanvas">
-          <canvas id="canvas" class="d"></canvas>
-          <canvas id="canvasM" class="m"></canvas>
+          <canvas id="canvas" class="grabba d"></canvas>
+          <canvas id="canvasM" class="grabba m"></canvas>
         </div>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -197,13 +197,14 @@ code general clean up and notes
 
               var scene = new three.Scene();
 
-              var camera = new THREE.PerspectiveCamera(5, window.innerWidth/window.innerHeight, 0.1, 3000); camera.position.set(0,0,750);
+              var camera = new THREE.PerspectiveCamera(5, window.innerWidth/window.innerHeight, 0.1, 3000);
+                  camera.position.set(0,0,750);
 
               var renderer = new three.WebGLRenderer({canvas: document.getElementById('canvasM'), antialias: false, alpha: true });
-              renderer.outputEncoding = THREE.sRGBEncoding;
-              renderer.setClearColor(0x000000, 0);
-              renderer.setPixelRatio(window.devicePixelRatio * 0.4);
-              renderer.setSize(window.innerWidth, window.innerHeight);
+                  renderer.outputEncoding = THREE.sRGBEncoding;
+                  renderer.setClearColor(0x000000, 0);
+                  renderer.setPixelRatio(window.devicePixelRatio * 0.4);
+                  renderer.setSize(window.innerWidth, window.innerHeight);
 
               window.addEventListener('resize', function()
               {
@@ -343,7 +344,7 @@ code general clean up and notes
       </div>
       <!-- ========================= box 11 ================================ -->
           <div class="box nobar black" id="ex-11">
-              <iframe class="proj-window" id="projs" src="preloader.html"/></iframe>
+              <iframe class="proj-window" id="projs" src="preloader.html"></iframe>
 
               <div class="proj-gall">
                 <div class="img-l-container" id="gallery">
@@ -484,12 +485,12 @@ code general clean up and notes
       </div>
       <!-- ========================= box 12 ================================ -->
             <div class="box nobar black" id="ex-12">
-              <iframe class="proj-window" id="others" src="preloader.html"/></iframe>
+              <iframe class="proj-window" id="others" src="preloader.html"></iframe>
               <div class="proj-gall">
               <div class="img-l-container" id="gallery">
                 <a class="linked" href="#beta" onclick="setTimeout(ifrmGRPHX, 400)"><img class="img-links-tabs1" src="images/graphx-nav.png"></a>
                 <a class="linked" href="https://elhoyo.neocities.org/" target="_blank"><img class="img-links-tabs2" src="images/elhoyo-ss.png"></a>
-                <a class="linked" href="https://isauljosue.github.io/afixe/" target="_blank"><img class="img-links-tabs3" style="object-position: " src="images/afixe-x.jpg"></a>
+                <a class="linked" href="https://isauljosue.github.io/afixe/" target="_blank"><img class="img-links-tabs3" src="images/afixe-x.jpg"></a>
                 <a class="linked" href="pickings.html" target="_blank"><img class="img-links-tabs4" src="images/pickings-ss.png"></a>
               </div>
             </div>
