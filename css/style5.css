@@ -40,9 +40,10 @@ h1, .h1 {
 
 h2, .h2 {
   font-family: "Yantramanav", sans-serif;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 700;
+  font-size: 1.5vh;
+  line-height: 2.3vh;
+  font-weight: 300;
+  text-decoration: none;
   margin: 0;
 }
 
@@ -201,6 +202,21 @@ transition: all .2s ease-in-out;
 }
 
 /* ------------------------------------------------------------ for board pages --------------------------------------------- */
+.cv-half-L {
+  width: 45%;
+  height: 100%;
+  padding: 1vw 0 0 1.75vw;
+  margin-top:0vw;
+  float: left;
+}
+
+.cv-half-R {
+  width: 48%;
+  height: 100%;
+  padding: 1vw;
+  margin-top:0vw;
+  float: right;
+}
 
 .whole-vp {
   width: 100vw;
@@ -448,6 +464,24 @@ iframe {
   border: none;
   padding: 0;
 }
+/* for about resum */
+#ex-14 {
+  display: inline;
+  width: 25%;
+  height: 0%;
+  float: left;
+  overflow-y: scroll;
+  opacity: 0;
+  border: none;
+  padding: 0;
+
+  border-radius: 1.5vw;
+  -webkit-border-radius: 1.5vw;
+  -o-border-radius: 1.5vw;
+
+  position: relative;
+  overflow-y: scroll;
+}
 
 #nav-1 {
   opacity: 1;
@@ -507,13 +541,68 @@ iframe {
         height: 60%;
     }
 /* -------------------------------------------------------- box 2 ------------------------------------------------ */
-  #box-2:target #ex-1 {
-      width: 25%;
-      height: 40%;
+  #resum:target #ex-1 {
+      width: 50%;
     }
-
-    #box-2:target #ex-2 {
-        width: 75%;
+    #resum:target #ex-2 {
+        height: 0%;
+        width: 50%;
+        border:none;
+        opacity: 0;
+    }
+    #resum:target #ex-7 {
+        width: 50%;
+        height: 0%;
+        opacity: 0;
+        border: none;
+    }
+    #resum:target #ex-8 {
+        width: 50%;
+        height: 0%;
+        opacity: 0;
+        border: none;
+        padding: 0;
+    }
+    #resum:target #ex-7.green{
+      padding: 0;
+    }
+    #resum:target #ex-9 {
+        height: 0%;
+        width: 50%;
+        border: none;
+        opacity: 0;
+    }
+    #resum:target #ex-9.green{
+      padding: 0;
+    }
+    #resum:target #ex-14{
+      width: 50%;
+      height: 90%;
+      opacity: 1;
+      border: 1px solid black;
+    }
+    #resum:target #nav-4 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #resum:target #nav-5 {
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+    }
+    #resum:target #nav-6 {
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+    }
+    #resum:target #others{
+      opacity: 1;
+      pointer-events: all;
+    }
+    #resum:target #gallery{
+      opacity: 0;
+      pointer-events: none;
     }
 /* -------------------------------------------------------- box 4 ------------------------------------------------ */
   #where:target #ex-6 {
@@ -806,6 +895,9 @@ background-color: #6b2cb8 ;
 .black {
   background-color: rgba(18, 18, 18, 1);
 }
+.gray {
+  background-color: rgba(117,130,127, 1);
+}
 .black:hover {
 }
 .chinita {
@@ -850,7 +942,7 @@ background-color: #6b2cb8 ;
   height: 22vh;
   max-height: 22vw;
   background-color: rgba(15,15,15,0.1);
-  padding: 1vw;
+  padding: 0.6vw 0 0 1vw;
 }
 
 .isa-about {
@@ -884,7 +976,7 @@ background-color: #6b2cb8 ;
   height: 5vh;
   background-color: rgba(18, 18, 18, 0.20);
   border-radius: 2.75vh;
-  padding: 1.75vh;
+  padding: 1.5vh;
 }
 
 
