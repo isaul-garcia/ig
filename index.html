@@ -42,7 +42,7 @@ code general clean up and notes
 
 <div id="home">
   <div id="resum">
-    <div id="box-3">
+    <div id="room">
       <div id="where">
         <div id="box-5">
           <div id="beta">
@@ -90,7 +90,7 @@ code general clean up and notes
 
               var renderer = new three.WebGLRenderer({canvas: document.getElementById('canvas'), antialias: false, alpha: true });
               renderer.outputEncoding = THREE.sRGBEncoding;
-              renderer.setClearColor(0x000000, 0);
+              renderer.setClearColor(0x1e31e3, 1);
               renderer.setPixelRatio(window.devicePixelRatio * 0.75);
               renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -319,7 +319,7 @@ code general clean up and notes
               Hello! ☺<br><br>
             </h3>
             <h3>
-              Welcome to my website. My name is Isaúl. Currently, I work in digital design and web development. I'm from Puerto Rico. I have previous bachelor's studies in Environment Design. Recently finished a master's in Design.<br><br>
+              Welcome to my website. My name is Isaúl. Currently, I work in digital design and web development. I'm from Puerto Rico. I have previous bachelor's studies in Environmental Design. Recently finished a master's in Design.<br><br>
             </h3>
             <h3>
               Interested in the web and things and the web of things. Exploring the posibilities of place computing, but for now mainly exercising my programming skills.<br><br>
@@ -333,11 +333,11 @@ code general clean up and notes
       </div>
       <!-- ========================= box 14 ================================ -->
             <div class="box nobar gray" id="ex-14" style="overflow-y: hidden">
-              <div class="big-title isaul">
-                <div style="width:20%;height: 22vh; float: left; position: absolute; padding-left: 0.70vw;">
+              <div class="big-title isaul" style="margin-top:-20px;">
+                <div style="width:20%;height: 20vh; float: left; position: absolute; padding-left: 0.70vw;">
                   <h1 style="color: #dbdbdb;">Isaúl<br>García<h1>
                 </div>
-                <div style="width:20%;height: 22vh; top:14.95%; float: left; position: absolute;margin-left: 52%;">
+                <div style="width:20%;height: 20vh; top:12.7%; float: left; position: absolute;margin-left: 52%;">
                   <h2>Puerto Rico<h2>
                   <h2>Spanish - English<h2>
                   <h2>isaul.josue@gmail.com<h2>
@@ -578,7 +578,248 @@ code general clean up and notes
 
 <!-- ========================= box 3 = ALIASES ====================== -->
 <div class="box nobar yellow" id="ex-3">
-          <a><img class="aliases" id="pulse" src="images/alias_line_light.png"></a>
+
+        <!--a href="#home" onclick="setTimeout(ifrmRESET, 550)" class="linked tohome" style="position:absolute;margin: 2.4vh;z-index:2;"><img class="nav-button-plus L" src="images/home-sq-01.svg"></a>
+        <a href="#room" class="linked to3d" style="position:absolute;margin: 2.4vh;z-index:2;"><img class="nav-button-plus L" src="images/room-sq-01.svg"></a-->
+
+        <a id="aliases" style="position:absolute;margin: 2.4vh;z-index:1;"><img class="aliases" src="images/alias_line_light.png"></a>
+
+        <!--div class="thecanvas">
+          <canvas id="canvasR" class="grabba d"></canvas>
+        </div-->
+
+            <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script type="module">
+
+              import * as THREE from 'https://threejs.org/build/three.module.js';
+
+              import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+              import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
+              import { RGBELoader } from 'https://threejs.org/examples/jsm/loaders/RGBELoader.js';
+              import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';
+              import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
+
+
+              var three = THREE;
+
+              var scene = new three.Scene();
+
+              var camera = new THREE.PerspectiveCamera(5, window.innerWidth/window.innerHeight, 0.1, 3000); camera.position.set(0,0,750);
+
+              var renderer = new three.WebGLRenderer({canvas: document.getElementById('canvasR'), antialias: false, alpha: true });
+              renderer.outputEncoding = THREE.sRGBEncoding;
+              renderer.setClearColor(0x1e31e3, 1);
+              renderer.setPixelRatio(window.devicePixelRatio * 0.75);
+              renderer.setSize(window.innerWidth, window.innerHeight);
+
+              window.addEventListener('resize', function()
+              {
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                renderer.setSize(width,height);
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+              });
+
+
+              var mouseX = 1, mouseY = 1;
+
+              var windowHalfX = window.innerWidth / 2;
+              var windowHalfY = window.innerHeight / 2;
+
+              animate();
+
+
+              var light = new THREE.AmbientLight(0xffffff, 0.5);
+              scene.add(light);
+
+              var light2 = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.5 );
+              scene.add( light2 );
+
+              var controls = new OrbitControls( camera, renderer.domElement );
+              controls.enableRotate = true;
+              controls.enableZoom = false; // optional
+              controls.enablePan = false;
+              controls.update();
+
+              var model;
+              var loader = new GLTFLoader();
+
+              loader.load( 'assets/ig-tiny-wireframes.glb', function ( gltf ) {
+              gltf.scene.position.y = 0;
+              gltf.scene.rotation.x = 1;
+              gltf.scene.scale.set(100,100,100) // scale here
+
+              model = gltf.scene;
+              scene.add(model);
+
+              document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+              } );
+
+
+              function onWindowResize() {
+
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize( window.innerWidth, window.innerHeight);
+
+                render();
+
+              }
+
+
+
+              function onDocumentMouseMove( event ) {
+
+                mouseX = ( event.clientX - windowHalfX );
+                mouseY = ( event.clientY - windowHalfY );
+              }
+
+
+              function animate() {
+
+                setTimeout( function() {
+
+                requestAnimationFrame( animate );
+
+                }, 1000 / 45 );
+
+                render();
+
+              }
+
+              function render() {
+
+                if (model) model.rotation.x += 0.001;
+                if (model) model.rotation.y += 0.0005;
+
+
+
+                  camera.lookAt( scene.position );
+
+                  renderer.render( scene, camera );
+              }
+
+
+            </script>
+
+            <script type="module">
+
+              import * as THREE from 'https://threejs.org/build/three.module.js';
+
+              import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+              import { GLTFLoader } from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
+              import { RGBELoader } from 'https://threejs.org/examples/jsm/loaders/RGBELoader.js';
+              import { RoughnessMipmapper } from 'https://threejs.org/examples/jsm/utils/RoughnessMipmapper.js';
+              import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
+
+
+              var three = THREE;
+
+              var scene = new three.Scene();
+
+              var camera = new THREE.PerspectiveCamera(5, window.innerWidth/window.innerHeight, 0.1, 3000);
+                  camera.position.set(0,0,750);
+
+              var renderer = new three.WebGLRenderer({canvas: document.getElementById('canvasM'), antialias: false, alpha: true });
+                  renderer.outputEncoding = THREE.sRGBEncoding;
+                  renderer.setClearColor(0x000000, 0);
+                  renderer.setPixelRatio(window.devicePixelRatio * 0.2);
+                  renderer.setSize(window.innerWidth, window.innerHeight);
+
+              window.addEventListener('resize', function()
+              {
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                renderer.setSize(width,height);
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+              });
+
+
+              var mouseX = 1, mouseY = 1;
+
+              var windowHalfX = window.innerWidth / 2;
+              var windowHalfY = window.innerHeight / 2;
+
+              animate();
+
+
+              var light = new THREE.AmbientLight(0xffffff, 0.5);
+              scene.add(light);
+
+              var light2 = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.5 );
+              scene.add( light2 );
+
+              var controls = new OrbitControls( camera, renderer.domElement );
+              controls.enableRotate = true;
+              controls.enableZoom = false; // optional
+              controls.enablePan = false;
+              controls.update();
+
+              var model;
+              var loader = new GLTFLoader();
+
+              loader.load( 'assets/ig-tiny-wireframes.glb', function ( gltf ) {
+              gltf.scene.position.y = 0;
+              gltf.scene.rotation.x = 1;
+              gltf.scene.scale.set(100,100,100) // scale here
+
+              model = gltf.scene;
+              scene.add(model);
+
+              document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+              } );
+
+
+              function onWindowResize() {
+
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize( window.innerWidth, window.innerHeight);
+
+                render();
+
+              }
+
+
+
+              function onDocumentMouseMove( event ) {
+
+                mouseX = ( event.clientX - windowHalfX );
+                mouseY = ( event.clientY - windowHalfY );
+              }
+
+
+              function animate() {
+
+                setTimeout( function() {
+
+                requestAnimationFrame( animate );
+
+                }, 1000 / 45 );
+
+                render();
+
+              }
+
+              function render() {
+
+                if (model) model.rotation.x += 0.001;
+                if (model) model.rotation.y += 0.0005;
+
+
+
+                  camera.lookAt( scene.position );
+
+                  renderer.render( scene, camera );
+              }
+
+
+            </script-->
+
         </div>
 
 
@@ -664,7 +905,7 @@ code general clean up and notes
   }
   function ifrmRX() {
   document.getElementById("projs").src = "roomx.html";
-  document.getElementById("portfolio").innerHTML = "Room X";
+  document.getElementById("portfolio").innerHTML = "Room X — My quarantined reality";
   }
   function ifrmARE() {
   document.getElementById("projs").src = "are.html";
