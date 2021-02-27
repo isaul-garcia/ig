@@ -16,18 +16,13 @@
 alter sizes of protfolio boxes
 add a dynamic logos page with many logos ive made
 make the types i have in my notebook and the opsu one
-finish the nft REtena first series
-make a single page # link for things like my cv and other one page needs
 make more alternate ig window pages
 []
-switch the blue background around so that is not transparent and the iframe is actually blackish
 add es-en buttons
-ig * button
 make other stuff more dinamic and maybe add more stuff
 code general clean up and notes
 []
-* portfolio page stutter when opened first time
-* fix resize kinda and center of the scene to follow it
+* fix stutter of the bottom box
 
 -->
 
@@ -489,8 +484,8 @@ code general clean up and notes
                 <a class="linked" href="#alpha" id="proj-img" onclick="setTimeout(ifrmBA, 400)">
                   <div class="proj-title h5 tag-spacing-D1">B!A</div><img class="img-links" src="images/sq_ba.png">
                   <div class="proj-tags h6 tag-spacing-D2 d" id="tags">
-                    <a class="tagbutton">Freelance/Work</a><a class="tagbutton">Brand</a><a class="tagbutton">Interface</a>
-                  <br><a class="tagbutton">Web Design</a><a class="tagbutton">Social Media Management</a><a class="tagbutton">Graphic</a>
+                    <a class="tagbutton">Work</a><a class="tagbutton">Brand</a><a class="tagbutton">Interface</a>
+                  <br><a class="tagbutton">Web Design</a><a class="tagbutton">Graphic</a>
                   </div>
                 </a>
                 <a class="linked" href="#alpha" id="proj-img" onclick="setTimeout(ifrmTH, 400)">
@@ -845,7 +840,7 @@ code general clean up and notes
 
 <!-- ========================= box 10 = EMAIL ======================== -->
 <div class="box nobar magenta" id="ex-10">
-        <a class="disc h7 email-user d">isaul.josue@gmail.com</a>
+        <a class="disc h7 email-user d" href="mailto:isaul.josue@gmail.com">isaul.josue@gmail.com</a>
         <a class="d">
           <img class="icons email d" src="images/social-icons-04.svg">
         </a>
@@ -921,7 +916,7 @@ code general clean up and notes
   }
   function ifrmMK() {
   document.getElementById("projs").src = "markado.html";
-  document.getElementById("portfolio").innerHTML = "El Markado";
+  document.getElementById("portfolio").innerHTML = "Markado";
   }
   function ifrmAQ() {
   document.getElementById("projs").src = "aqv.html";

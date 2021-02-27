@@ -912,8 +912,8 @@ iframe {
 .wrapper {
     z-index: -1;
     width: 100%;
-    height: 100%
-    background: radial-gradient(ellipse at center,#F17C58, #8c00e3, #24AADB , #27DBB1,#FFDC18,#F17C58, #8c00e3, #24AADB , #27DBB1,#FFDC18,#F17C58, #8c00e3, #24AADB , #27DBB1);
+    height: 100%;
+    /*background: radial-gradient(ellipse at center,#F17C58, #8c00e3, #24AADB , #27DBB1,#FFDC18,#F17C58, #8c00e3, #24AADB , #27DBB1,#FFDC18,#F17C58, #8c00e3, #24AADB , #27DBB1);*/
     background-color: #1e31e3;
     background-size: 100vw 100vh;
     background-position: center
@@ -1381,6 +1381,7 @@ margin-top: 0.75vw;}
   margin-top: -0.5vw;
   float: left;
   background-color: #3cae44;
+  font-size: 15px;
 }
 
 .discord {
@@ -1411,6 +1412,7 @@ margin-top: 0.75vw;}
   padding:2.29vw;
   margin-top: -0.2vw;
   margin-left: -1.6vw;
+  font-size: 15px;
   float: left;
   background-color: #3cae44;
 }
