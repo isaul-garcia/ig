@@ -82,7 +82,7 @@ code general clean up and notes
               var renderer = new three.WebGLRenderer({canvas: document.getElementById('canvas'), antialias: false, alpha: true });
               renderer.outputEncoding = THREE.sRGBEncoding;
               renderer.setClearColor(0x1e31e3, 1);
-              renderer.setPixelRatio(window.devicePixelRatio * 0.75);
+              renderer.setPixelRatio(0.75);
               renderer.setSize(window.innerWidth, window.innerHeight);
 
               window.addEventListener('resize', function()
