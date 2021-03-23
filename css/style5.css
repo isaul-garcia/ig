@@ -324,7 +324,6 @@ iframe {
 }
 
 #ex-3 {
-  display: inline;
   width: 100%;
   height: 10%;
   float: left;
@@ -332,6 +331,10 @@ iframe {
   border-radius: 1.5vw;
   opacity: 1;
   display: flex;
+  bottom: 0;
+  left: 0;
+  margin-right: 100vw;
+  position: fixed;
   transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
@@ -342,7 +345,7 @@ iframe {
   display: inline;
   width: 0%;
   height: 10%;
-  float: left;
+  float: right;
   overflow-y: hidden;
   border-radius: 1.5vw;
   opacity: 0;
@@ -352,7 +355,7 @@ iframe {
   display: inline;
   width: 0%;
   height: 10%;
-  float: left;
+  float: right;
   overflow-y: hidden;
   border-radius: 1.5vw;
   opacity: 0;
@@ -362,7 +365,7 @@ iframe {
   display: inline;
   width: 0%;
   height: 10%;
-  float: left;
+  float: right;
   overflow-y: hidden;
   border-radius: 1.5vw;
   opacity: 0;
@@ -372,7 +375,7 @@ iframe {
   display: inline;
   width: 0%;
   height: 10%;
-  float: left;
+  float: right;
   overflow-y: hidden;
   border-radius: 1.5vw;
   opacity: 0;
@@ -1567,7 +1570,7 @@ margin-top: 0.75vw;}
 }
 
 .content_img img{
- border-radius: 1.5vw;
+ border-radius: 3.15vh;
  border: 1px solid #121212;
  object-fit: cover;
 }
@@ -1907,7 +1910,7 @@ margin-top: 0.75vw;}
     height: 92%;
     float: left;
     overflow-y: scroll;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 1;
   }
 
@@ -1917,7 +1920,7 @@ margin-top: 0.75vw;}
     height: 0%;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 1;
   }
 
@@ -1927,7 +1930,7 @@ margin-top: 0.75vw;}
     height: 10%;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 1;
   }
 
@@ -1939,7 +1942,7 @@ margin-top: 0.75vw;}
     display: inline;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 0;
   }
 
@@ -1951,7 +1954,7 @@ margin-top: 0.75vw;}
     display: inline;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 0;
   }
 
@@ -1963,7 +1966,7 @@ margin-top: 0.75vw;}
     display: inline;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 0;
   }
 
@@ -1975,7 +1978,7 @@ margin-top: 0.75vw;}
     display: inline;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 0;
   }
 
@@ -2001,7 +2004,7 @@ margin-top: 0.75vw;}
     height: 8%;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 1;
     position: relative;
   }
@@ -2013,7 +2016,7 @@ margin-top: 0.75vw;}
     height: 8%;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 1;
   }
 
@@ -2024,7 +2027,7 @@ margin-top: 0.75vw;}
     height: 8%;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 1;
   }
 
@@ -2035,7 +2038,7 @@ margin-top: 0.75vw;}
     height: 0%;
     float: left;
     overflow-y: scroll;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 0;
     border: none;
     padding: 0;
@@ -2048,7 +2051,7 @@ margin-top: 0.75vw;}
     height: 0%;
     float: left;
     overflow-y: hidden;
-    border-radius: 6vw;
+    border-radius: 5vw;
     opacity: 0;
     border: none;
     padding: 0;
@@ -2546,7 +2549,7 @@ margin-top: 0.75vw;}
 
   .nav-button-back {
     right:0;
-    margin: 1.9vh;
+    margin: 2.3vh;
     width: 5vh;
     height: 5vh;
     background-color: rgba(18, 18, 18, 0.5);
@@ -2971,6 +2974,26 @@ margin-top: 0.75vw;}
     object-position: 50% 50%;
     float: left;
     background-color: rgba(255, 0, 0, 0);
+  }
+
+
+  /* Parent Container*/
+  .content_img{
+   height: 28vh;
+  }
+
+  .content_img img{
+   border-radius: 4vh;
+  }
+
+  /* Child Text Container */
+  .content_img #titule{
+   margin: 1.5vh;
+   padding: 15px 15px;
+  }
+
+  .content_img #tagos{
+    display: none;
   }
 
   /* ------------------------------------------------- aliases marquee graphx -------------------------------------------------------*/
