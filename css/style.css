@@ -578,6 +578,11 @@ overflow: hidden !important;
   transition: 0.2s;
 }
 
+.titule-again {
+  padding:1.5vw;
+  margin-top:-11.5vh;
+  z-index:2;
+}
 
 /* ---------- aliases marquee graphx -----------*/
 
@@ -656,6 +661,12 @@ h5, .h5 {
   width: 95%;
   height: 17vh;
   margin-top: 92.5vh;
+}
+
+.titule-again {
+  padding:3.5vw;
+  margin-top:-11.5vh;
+  z-index:2;
 }
 
 /*---- uhm.. above this please ----*/
