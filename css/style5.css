@@ -151,9 +151,9 @@ right:0;
 width: 100%;
 height: 100vh;
 z-index: 99999999;
-background-image: url('../images/ig-and-line-loader-01.svg'); /* your icon gif file path */
+background-image: url('../images/ig--loop-black.gif'); /* your icon gif file path */
 background-repeat: no-repeat;
-background-size: 90px 37px;
+background-size: 89px 37px;
 background-color: rgba(18, 18, 18, 1);
 background-position: center;
 border-radius: 1.5vw;
@@ -1042,6 +1042,7 @@ background-color: #6b2cb8 ;
 .isa-about {
   padding: 1vw;
   margin-top:0vw;
+  max-width: 25vw;
 }
 
 .big-title {
@@ -1301,7 +1302,7 @@ background-color: #6b2cb8 ;
 /*------------------------------------------------- pre loader otref ---------------------------------------------------*/
 
 .edge-lines {
-  width: 3.5vh;
+  width: 3vh;
 }
 
 .tr {
@@ -1791,7 +1792,7 @@ margin-top: 0.75vw;}
   width: 100%;
   height: 100vh;
   z-index: 99999999;
-  background-image: url('../images/ig-and-line-loader-01.svg'); /* your icon gif file path */
+  background-image: url('../images/ig--loop-black.gif'); /* your icon gif file path */
   background-repeat: no-repeat;
   background-size: 90px 37px;
   background-color: rgba(18, 18, 18, 1);
@@ -2795,7 +2796,7 @@ margin-top: 0.75vw;}
   /*------------------------------------------------- pre loader otref ---------------------------------------------------*/
 
   .edge-lines {
-    width: 3.5vh;
+    width: 3vh;
   }
 
   .tr {
@@ -2838,12 +2839,13 @@ margin-top: 0.75vw;}
 
   /* ---------------------------------------------------- nav and buttons ----------------------------------------------*/
   .proj-title {
+    font-size: 2.5vh;
     position: absolute;
     top: 1.5vh;
     left: 1.5vh;
     padding: 1vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
     background-color: rgba(18, 18, 18, 0.65);
     border-radius: 5vh;
     pointer-events: none;
