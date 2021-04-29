@@ -13,11 +13,13 @@
 
 <!--
 
-make more stuff for other stuff and define better what other stuff and categories for portfolio for faster and easier navigation
+add stuff in 'other stuff'
 []
 add es-en buttons
 code general clean up and notes
 []
+
+*for an unbloated version of the website you can always visit the /archive*
 
 -->
 
@@ -45,6 +47,8 @@ code general clean up and notes
 <!-- ========================= box 1 = IG ====================================== -->
 <div class="box nobar wrapper" id="ex-1">
         <a href="#home" onclick="setTimeout(ifrmRESET, 550)" class="secret" style="position:absolute;margin: 2.3vh;z-index:2;"><img class="nav-button-plus L" src="images/home-sq-01.svg"></a>
+        <a onclick="stopTHREE()" class="secret" style="position:absolute;margin: 2.3vh;z-index:1;"><img class="nav-button-stop L" id="stop" src="images/stop-sq-01.svg"></a>
+        <a onclick="playTHREE()" class="secret" style="position:absolute;margin: 2.3vh;z-index:1;"><img class="nav-button-play L" id="play" src="images/play-sq-01.svg"></a>
 
         <a class="linked m" id="nav-2" href="#home"><img class="nav-button-back R m" src="images/back-sq-01.svg"></a>
         <a class="linked m" id="nav-3" onclick="location.href='#porta';setTimeout(ifrmPRE, 500)"><img class="nav-button-back R m" src="images/back-sq-01.svg"></a>
@@ -54,7 +58,7 @@ code general clean up and notes
 
         <a class="linked m" id="nav-8" href="#home"><img class="nav-button-back R m" src="images/back-sq-01.svg"></a>
 
-        <div class="thecanvas">
+        <div class="thecanvas" id="thecanvas">
           <canvas id="canvas" class="grabba d"></canvas>
           <canvas id="canvasM" class="grabba m"></canvas>
         </div>
@@ -308,7 +312,7 @@ code general clean up and notes
               Hello! ☺<br><br>
             </h3>
             <h3>
-              My name is Isaúl. Welcome to my website.<br><br>Interested in the web and things and the web of things. Exploring the posibilities of place computing, but for now mainly exercising my programming skills.<br><br>
+              My name is Isaúl. Welcome to my website.<br><br>Interested in the web and things and the web of things, in the form of Mixed Interactions and Augmented Environments. I also like to draw and make digital art.<br><br>
             </h3><br><br>
             <h3>
               <i>Designer, Developer, Environments</i><br><br>
@@ -397,6 +401,7 @@ code general clean up and notes
       </div>
       <!-- ========================= box 11 ==================================== -->
           <div class="box nobar black" id="ex-11">
+
               <iframe class="proj-window" id="projs" src="preloader.html"></iframe>
 
             <div class="galflex">
@@ -814,10 +819,10 @@ code general clean up and notes
         </a>
       </div>
 
-<!-- ========================= box 6 = ARENA =================================== -->
+<!-- ========================= box 6 = arena {GITHUB} =================================== -->
 <div class="box nobar magenta" id="ex-6">
-        <a class="linked" target="_blank" href="https://www.are.na/idt">
-          <img class="icons arena" src="images/social-icons-03.svg">
+        <a class="linked" target="_blank" href="https://github.com/isauljosue">
+          <img class="icons arena" src="images/social-icons-05.svg">
         </a>
       </div>
 
@@ -933,6 +938,18 @@ code general clean up and notes
   document.getElementById("otherstuff").innerHTML = "Other Stuff";
   document.getElementById("projs").src = "preloader.html";
   document.getElementById("portfolio").innerHTML = "Portfolio";
+  }
+
+  function stopTHREE() {
+  document.getElementById("thecanvas").style.display = "none";
+  document.getElementById("stop").style.display = "none";
+  document.getElementById("play").style.display = "block";
+  }
+
+  function playTHREE() {
+  document.getElementById("thecanvas").style.display = "block";
+  document.getElementById("play").style.display = "none";
+  document.getElementById("stop").style.display = "block";
   }
 
   function portlinkSwitch() {

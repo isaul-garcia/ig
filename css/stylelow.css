@@ -58,7 +58,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-family: "Inter", sans-serif;
-    font-size: 4vh;
+    font-size: 2.75vh;
     line-height: 4vh;
   font-weight: 700;
   text-decoration: none;
@@ -299,6 +299,7 @@ iframe {
     -o-transition: all .4s ease-in-out;
 }
 
+/* IG THREEJS */
 #ex-1 {
   display: block;
   width: 75%;
@@ -311,8 +312,14 @@ iframe {
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
+
+  background-image: url('../images/ig--loop-blue.gif'); /* your icon gif file path */
+  background-repeat: no-repeat;
+  background-size: 89px 37px;
+  background-position: center;
 }
 
+/* about */
 #ex-2 {
   display: inline;
   width: 25%;
@@ -323,6 +330,7 @@ iframe {
   opacity: 1;
 }
 
+/* footer */
 #ex-3 {
   width: 100%;
   height: 10%;
@@ -341,6 +349,7 @@ iframe {
   -o-transition: all .4s ease-in-out;
 }
 
+/*  */
 #ex-4 {
   display: inline;
   width: 0%;
@@ -384,11 +393,11 @@ iframe {
 /* PORTFOLIO */
 #ex-7 {
   display: inline;
-  width: 25%;
-  height: 10%;
+  width: 16%;
+  height: 6%;
   float: left;
   overflow-y: hidden;
-  border-radius: 1.5vw;
+  border-radius: 0.65vw;
   opacity: 1;
   position: relative;
 }
@@ -396,22 +405,22 @@ iframe {
 /* OTHER otreF */
 #ex-8 {
   display: inline;
-  width: 25%;
-  height: 10%;
+  width: 16%;
+  height: 6%;
   float: left;
   overflow-y: hidden;
-  border-radius: 1.5vw;
+  border-radius: 0.65vw;
   opacity: 1;
 }
 
 /* ELSEWHERE */
 #ex-9 {
   display: inline;
-  width: 25%;
-  height: 10%;
+  width: 16%;
+  height: 6%;
   float: left;
   overflow-y: hidden;
-  border-radius: 1.5vw;
+  border-radius: 0.65vw;
   opacity: 1;
 }
 
@@ -1020,7 +1029,7 @@ background-color: #6b2cb8 ;
 
 .green {
   background-color: #de4617;
-  padding: 3vh;
+  padding: 1vh;
 }
  {
    background-color: rgba(75, 214, 60, 1);
@@ -1493,10 +1502,6 @@ margin-top: 0.75vw;}
   font-size: 1.55vh;
   float: left;
   background-color: #3cae44;
-
-  user-drag: none;
-user-select: text;
--webkit-user-drag: none;
 }
 
 
@@ -2489,13 +2494,6 @@ user-select: text;
   }
   .magenta {
     background-color: #3cae44;
-
-    user-drag: none;
-user-select: none;
--moz-user-select: none;
--webkit-user-drag: none;
--webkit-user-select: none;
--ms-user-select: none;
   }
   .magenta:hover {
   }
