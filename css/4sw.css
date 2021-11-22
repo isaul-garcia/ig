@@ -144,10 +144,11 @@ canvas {
 
 .navlink {
   pointer-events: auto;
+  color: yellow;
 }
 
 .navlink:hover {
-  color: yellow;
+  color: #0000ff;
 }
 
 .pointer {cursor: pointer;}
